@@ -62,9 +62,11 @@ Every visible text element that differs between languages carries both:
 - Google Maps iframe: `<iframe src="">` in the contact section — add embed URL to `src`
 - Photo: `about__photo-placeholder` div — replace with `<img src="..." alt="...">`
 
-## GitHub
-Private repo: `https://github.com/pkoller/physiotoni` — branch `master`.
+## GitHub & Hosting
+Public repo: `https://github.com/pkoller/physiotoni` — branch `master`.
+Live site: `https://pkoller.github.io/physiotoni`
 Push with: `git add index.html style.css script.js && git commit -m "..." && git push`
+GitHub Pages deploys automatically on push to `master`.
 Don't commit the `.claude/` or `media/` folders (both in `.gitignore`).
 
 ## What NOT to do
