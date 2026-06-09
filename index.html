@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PhysioToni – Physiotherapie · Manuelle Therapie · Massage" />
+  <title>PhysioToni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo">PhysioToni</a>
+
+      <nav class="nav" id="nav">
+        <a href="#leistungen" class="nav__link" data-de="Leistungen" data-en="Services">Leistungen</a>
+        <a href="#ueber-uns" class="nav__link" data-de="Über uns" data-en="About">Über uns</a>
+        <a href="#kontakt" class="nav__link" data-de="Kontakt" data-en="Contact">Kontakt</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-toggle__active" id="langLabel">DE</span>
+          <span class="lang-toggle__sep">|</span>
+          <span class="lang-toggle__inactive" id="langOther">EN</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <p class="hero__eyebrow" data-de="Physiotherapie in besten Händen" data-en="Physiotherapy at its best">Physiotherapie in besten Händen</p>
+      <h1 class="hero__title" data-de="Ihre Gesundheit in guten Händen" data-en="Your health in good hands">Ihre Gesundheit in guten Händen</h1>
+      <p class="hero__sub" data-de="Individuelle Therapie – für mehr Beweglichkeit, weniger Schmerzen und mehr Lebensqualität." data-en="Individual therapy – for more mobility, less pain, and a better quality of life.">Individuelle Therapie – für mehr Beweglichkeit, weniger Schmerzen und mehr Lebensqualität.</p>
+      <a href="#kontakt" class="btn btn--primary" data-de="Termin vereinbaren" data-en="Book appointment">Termin vereinbaren</a>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section" id="leistungen">
+    <div class="container">
+      <p class="section__eyebrow" data-de="Was wir anbieten" data-en="What we offer">Was wir anbieten</p>
+      <h2 class="section__title" data-de="Unsere Leistungen" data-en="Our Services">Unsere Leistungen</h2>
+      <p class="section__sub" data-de="Wir bieten ein breites Spektrum physiotherapeutischer Behandlungen – zugeschnitten auf Ihre Bedürfnisse." data-en="We offer a broad range of physiotherapy treatments – tailored to your individual needs.">Wir bieten ein breites Spektrum physiotherapeutischer Behandlungen – zugeschnitten auf Ihre Bedürfnisse.</p>
+
+      <div class="services-grid">
+
+        <article class="service-card">
+          <div class="service-card__icon" aria-hidden="true">🤲</div>
+          <h3 class="service-card__title" data-de="Manuelle Therapie" data-en="Manual Therapy">Manuelle Therapie</h3>
+          <p class="service-card__desc" data-de="Gezielte Techniken zur Behandlung von Gelenk- und Muskeldysfunktionen." data-en="Targeted techniques to treat joint and muscle dysfunctions.">Gezielte Techniken zur Behandlung von Gelenk- und Muskeldysfunktionen.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__icon" aria-hidden="true">💆</div>
+          <h3 class="service-card__title" data-de="Massage" data-en="Massage">Massage</h3>
+          <p class="service-card__desc" data-de="Klassische und tiefengewebliche Massagen zur Entspannung und Schmerzlinderung." data-en="Classic and deep-tissue massage for relaxation and pain relief.">Klassische und tiefengewebliche Massagen zur Entspannung und Schmerzlinderung.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__icon" aria-hidden="true">🏃</div>
+          <h3 class="service-card__title" data-de="Krankengymnastik" data-en="Therapeutic Exercise">Krankengymnastik</h3>
+          <p class="service-card__desc" data-de="Individuelle Übungsprogramme zur Verbesserung von Kraft, Beweglichkeit und Koordination." data-en="Individual exercise programs to improve strength, mobility, and coordination.">Individuelle Übungsprogramme zur Verbesserung von Kraft, Beweglichkeit und Koordination.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__icon" aria-hidden="true">🏅</div>
+          <h3 class="service-card__title" data-de="Sportphysiotherapie" data-en="Sports Physiotherapy">Sportphysiotherapie</h3>
+          <p class="service-card__desc" data-de="Optimale Betreuung für Sportler – von der Verletzungsprävention bis zur Reha." data-en="Optimal care for athletes – from injury prevention to full rehabilitation.">Optimale Betreuung für Sportler – von der Verletzungsprävention bis zur Reha.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__icon" aria-hidden="true">⚡</div>
+          <h3 class="service-card__title" data-de="Elektrotherapie" data-en="Electrotherapy">Elektrotherapie</h3>
+          <p class="service-card__desc" data-de="Einsatz von elektrischen Reizen zur Schmerzreduktion und Muskelstimulation." data-en="Use of electrical stimulation for pain reduction and muscle activation.">Einsatz von elektrischen Reizen zur Schmerzreduktion und Muskelstimulation.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__icon" aria-hidden="true">💬</div>
+          <h3 class="service-card__title" data-de="Beratung" data-en="Consultation">Beratung</h3>
+          <p class="service-card__desc" data-de="Ergonomieberatung, Heimübungsprogramme und Gesundheitstipps für den Alltag." data-en="Ergonomics advice, home exercise programs, and health tips for everyday life.">Ergonomieberatung, Heimübungsprogramme und Gesundheitstipps für den Alltag.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section section--alt" id="ueber-uns">
+    <div class="container">
+      <div class="about">
+        <div class="about__image">
+          <div class="about__photo-placeholder" aria-label="Foto Therapeutin/Therapeut">
+            <span aria-hidden="true">🧑‍⚕️</span>
+          </div>
+        </div>
+        <div class="about__text">
+          <p class="section__eyebrow" data-de="Ihre Therapeutin / Ihr Therapeut" data-en="Your therapist">Ihre Therapeutin / Ihr Therapeut</p>
+          <h2 class="section__title" data-de="Über uns" data-en="About us">Über uns</h2>
+          <p data-de="Mit langjähriger Erfahrung und umfangreicher Fachausbildung begleite ich Sie auf dem Weg zu mehr Gesundheit und Wohlbefinden. Jede Therapie wird individuell auf Ihre Beschwerden und Ziele abgestimmt – mit Zeit, Sorgfalt und einem ganzheitlichen Blick auf Ihren Körper." data-en="With years of experience and extensive specialist training, I guide you towards better health and well-being. Every therapy is individually tailored to your complaints and goals – with time, care, and a holistic view of your body.">Mit langjähriger Erfahrung und umfangreicher Fachausbildung begleite ich Sie auf dem Weg zu mehr Gesundheit und Wohlbefinden. Jede Therapie wird individuell auf Ihre Beschwerden und Ziele abgestimmt – mit Zeit, Sorgfalt und einem ganzheitlichen Blick auf Ihren Körper.</p>
+          <ul class="about__credentials">
+            <li data-de="Staatlich geprüfte/r PhysiotherapeutIn" data-en="State-certified physiotherapist">Staatlich geprüfte/r PhysiotherapeutIn</li>
+            <li data-de="Zertifizierte Manuelle Therapie (OMT)" data-en="Certified manual therapy (OMT)">Zertifizierte Manuelle Therapie (OMT)</li>
+            <li data-de="Sportphysiotherapie (DOSB)" data-en="Sports physiotherapy (DOSB)">Sportphysiotherapie (DOSB)</li>
+            <li data-de="Fortbildungen in Dry Needling & Faszientherapie" data-en="Advanced training in dry needling & fascia therapy">Fortbildungen in Dry Needling & Faszientherapie</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="kontakt">
+    <div class="container">
+      <p class="section__eyebrow" data-de="So erreichen Sie uns" data-en="Get in touch">So erreichen Sie uns</p>
+      <h2 class="section__title" data-de="Kontakt & Anfahrt" data-en="Contact & Location">Kontakt & Anfahrt</h2>
+
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <div class="contact-info__item">
+            <span class="contact-info__icon" aria-hidden="true">📍</span>
+            <div>
+              <strong data-de="Adresse" data-en="Address">Adresse</strong>
+              <p>Musterstraße 1<br />12345 Musterstadt</p>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <span class="contact-info__icon" aria-hidden="true">📞</span>
+            <div>
+              <strong data-de="Telefon" data-en="Phone">Telefon</strong>
+              <p><a href="tel:+4912345678">+49 123 45678</a></p>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <span class="contact-info__icon" aria-hidden="true">✉️</span>
+            <div>
+              <strong data-de="E-Mail" data-en="Email">E-Mail</strong>
+              <p><a href="mailto:info@physiotoni.de">info@physiotoni.de</a></p>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <span class="contact-info__icon" aria-hidden="true">🕐</span>
+            <div>
+              <strong data-de="Öffnungszeiten" data-en="Opening hours">Öffnungszeiten</strong>
+              <p data-de="Mo–Fr: 8:00 – 18:00 Uhr<br />Sa: nach Vereinbarung" data-en="Mon–Fri: 8:00 am – 6:00 pm<br />Sat: by appointment">Mo–Fr: 8:00 – 18:00 Uhr<br />Sa: nach Vereinbarung</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <h3 class="contact-form-wrap__title" data-de="Nachricht senden" data-en="Send a message">Nachricht senden</h3>
+          <form class="contact-form" id="contactForm" novalidate>
+            <label class="form-label" for="name" data-de="Name" data-en="Name">Name</label>
+            <input class="form-input" type="text" id="name" name="name" autocomplete="name" required />
+
+            <label class="form-label" for="email" data-de="E-Mail" data-en="Email">E-Mail</label>
+            <input class="form-input" type="email" id="email" name="email" autocomplete="email" required />
+
+            <label class="form-label" for="message" data-de="Nachricht" data-en="Message">Nachricht</label>
+            <textarea class="form-input form-input--textarea" id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" class="btn btn--primary" data-de="Senden" data-en="Send">Senden</button>
+          </form>
+        </div>
+
+        <!-- Replace src with your Google Maps embed URL -->
+        <div class="map-wrap">
+          <iframe
+            class="map"
+            src=""
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Standort PhysioToni"
+          ></iframe>
+          <!-- TODO: add Google Maps embed URL to the src attribute above -->
+          <div class="map-placeholder" aria-hidden="true">
+            <span>📍</span>
+            <p data-de="Karte folgt" data-en="Map coming soon">Karte folgt</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; <span id="year"></span> PhysioToni</p>
+      <nav class="footer__nav">
+        <a href="#" data-de="Impressum" data-en="Legal notice">Impressum</a>
+        <a href="#" data-de="Datenschutz" data-en="Privacy policy">Datenschutz</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
