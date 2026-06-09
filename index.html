@@ -24,6 +24,10 @@
       </nav>
 
       <div class="header__actions">
+        <a href="tel:+4912345678" class="header__phone">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +49 123 45678
+        </a>
         <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
           <span class="lang-toggle__active" id="langLabel">DE</span>
           <span class="lang-toggle__sep">|</span>
@@ -42,54 +46,75 @@
     <div class="container hero__content">
       <p class="hero__eyebrow" data-de="Physiotherapie in besten Händen" data-en="Physiotherapy at its best">Physiotherapie in besten Händen</p>
       <h1 class="hero__title" data-de="Ihre Gesundheit in guten Händen" data-en="Your health in good hands">Ihre Gesundheit in guten Händen</h1>
-      <p class="hero__sub" data-de="Individuelle Therapie – für mehr Beweglichkeit, weniger Schmerzen und mehr Lebensqualität." data-en="Individual therapy – for more mobility, less pain, and a better quality of life.">Individuelle Therapie – für mehr Beweglichkeit, weniger Schmerzen und mehr Lebensqualität.</p>
-      <a href="#kontakt" class="btn btn--primary" data-de="Termin vereinbaren" data-en="Book appointment">Termin vereinbaren</a>
+      <p class="hero__sub" data-de="Schmerzen, Verspannungen, Verletzungen – wir helfen Ihnen, schnell und dauerhaft wieder beweglich zu werden." data-en="Pain, tension, injury — we help you move freely again, quickly and lastingly.">Schmerzen, Verspannungen, Verletzungen – wir helfen Ihnen, schnell und dauerhaft wieder beweglich zu werden.</p>
+      <div class="hero__ctas">
+        <a href="tel:+4912345678" class="btn btn--primary" data-de="Jetzt anrufen" data-en="Call now">Jetzt anrufen</a>
+        <a href="#contactForm" class="btn btn--ghost" data-de="Termin anfragen" data-en="Request appointment">Termin anfragen</a>
+      </div>
     </div>
   </section>
 
   <!-- ===== SERVICES ===== -->
-  <section class="section" id="leistungen">
+  <section class="section section--white" id="leistungen">
     <div class="container">
       <p class="section__eyebrow" data-de="Was wir anbieten" data-en="What we offer">Was wir anbieten</p>
-      <h2 class="section__title" data-de="Unsere Leistungen" data-en="Our Services">Unsere Leistungen</h2>
-      <p class="section__sub" data-de="Wir bieten ein breites Spektrum physiotherapeutischer Behandlungen – zugeschnitten auf Ihre Bedürfnisse." data-en="We offer a broad range of physiotherapy treatments – tailored to your individual needs.">Wir bieten ein breites Spektrum physiotherapeutischer Behandlungen – zugeschnitten auf Ihre Bedürfnisse.</p>
+      <h2 class="section__title" data-de="Womit können wir Ihnen helfen?" data-en="How can we help you?">Womit können wir Ihnen helfen?</h2>
+      <p class="section__sub" data-de="Ob Rückenschmerzen, Sportverletzung oder Reha nach einer OP – wir finden den richtigen Weg zurück zu Ihrer Gesundheit." data-en="Whether back pain, sports injury or post-surgery rehab – we find the right path back to your health.">Ob Rückenschmerzen, Sportverletzung oder Reha nach einer OP – wir finden den richtigen Weg zurück zu Ihrer Gesundheit.</p>
 
       <div class="services-grid">
 
         <article class="service-card">
-          <div class="service-card__icon" aria-hidden="true">🤲</div>
+          <div class="service-card__icon" aria-hidden="true">
+            <!-- hands / manual therapy -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+          </div>
           <h3 class="service-card__title" data-de="Manuelle Therapie" data-en="Manual Therapy">Manuelle Therapie</h3>
-          <p class="service-card__desc" data-de="Gezielte Techniken zur Behandlung von Gelenk- und Muskeldysfunktionen." data-en="Targeted techniques to treat joint and muscle dysfunctions.">Gezielte Techniken zur Behandlung von Gelenk- und Muskeldysfunktionen.</p>
+          <p class="service-card__desc" data-de="Rücken-, Nacken- oder Gelenkschmerzen? Wir behandeln gezielt die Ursache – nicht nur die Symptome." data-en="Back, neck or joint pain? We treat the root cause — not just the symptoms.">Rücken-, Nacken- oder Gelenkschmerzen? Wir behandeln gezielt die Ursache – nicht nur die Symptome.</p>
         </article>
 
         <article class="service-card">
-          <div class="service-card__icon" aria-hidden="true">💆</div>
+          <div class="service-card__icon" aria-hidden="true">
+            <!-- heart / wellness -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
           <h3 class="service-card__title" data-de="Massage" data-en="Massage">Massage</h3>
-          <p class="service-card__desc" data-de="Klassische und tiefengewebliche Massagen zur Entspannung und Schmerzlinderung." data-en="Classic and deep-tissue massage for relaxation and pain relief.">Klassische und tiefengewebliche Massagen zur Entspannung und Schmerzlinderung.</p>
+          <p class="service-card__desc" data-de="Verspannt, gestresst, erschöpft? Unsere Massagen lösen tiefes Muskelgewebe und geben Ihnen Ihren Körper zurück." data-en="Tense, stressed, exhausted? Our massages release deep muscle tissue and give you your body back.">Verspannt, gestresst, erschöpft? Unsere Massagen lösen tiefes Muskelgewebe und geben Ihnen Ihren Körper zurück.</p>
         </article>
 
         <article class="service-card">
-          <div class="service-card__icon" aria-hidden="true">🏃</div>
+          <div class="service-card__icon" aria-hidden="true">
+            <!-- activity / exercise -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
           <h3 class="service-card__title" data-de="Krankengymnastik" data-en="Therapeutic Exercise">Krankengymnastik</h3>
-          <p class="service-card__desc" data-de="Individuelle Übungsprogramme zur Verbesserung von Kraft, Beweglichkeit und Koordination." data-en="Individual exercise programs to improve strength, mobility, and coordination.">Individuelle Übungsprogramme zur Verbesserung von Kraft, Beweglichkeit und Koordination.</p>
+          <p class="service-card__desc" data-de="Nach einer OP oder Verletzung? Mit gezielten Übungen bauen wir Kraft und Beweglichkeit Schritt für Schritt wieder auf." data-en="After surgery or injury? With targeted exercises we rebuild strength and mobility step by step.">Nach einer OP oder Verletzung? Mit gezielten Übungen bauen wir Kraft und Beweglichkeit Schritt für Schritt wieder auf.</p>
         </article>
 
         <article class="service-card">
-          <div class="service-card__icon" aria-hidden="true">🏅</div>
+          <div class="service-card__icon" aria-hidden="true">
+            <!-- shield / protection / sports -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
           <h3 class="service-card__title" data-de="Sportphysiotherapie" data-en="Sports Physiotherapy">Sportphysiotherapie</h3>
-          <p class="service-card__desc" data-de="Optimale Betreuung für Sportler – von der Verletzungsprävention bis zur Reha." data-en="Optimal care for athletes – from injury prevention to full rehabilitation.">Optimale Betreuung für Sportler – von der Verletzungsprävention bis zur Reha.</p>
+          <p class="service-card__desc" data-de="Sportverletzung oder Überlastung? Wir bringen Sie schnell und sicher zurück in Ihr Training – besser als zuvor." data-en="Sports injury or overload? We get you safely back to training — better than before.">Sportverletzung oder Überlastung? Wir bringen Sie schnell und sicher zurück in Ihr Training – besser als zuvor.</p>
         </article>
 
         <article class="service-card">
-          <div class="service-card__icon" aria-hidden="true">⚡</div>
+          <div class="service-card__icon" aria-hidden="true">
+            <!-- zap / electro -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
           <h3 class="service-card__title" data-de="Elektrotherapie" data-en="Electrotherapy">Elektrotherapie</h3>
-          <p class="service-card__desc" data-de="Einsatz von elektrischen Reizen zur Schmerzreduktion und Muskelstimulation." data-en="Use of electrical stimulation for pain reduction and muscle activation.">Einsatz von elektrischen Reizen zur Schmerzreduktion und Muskelstimulation.</p>
+          <p class="service-card__desc" data-de="Chronische Schmerzen, die einfach nicht weggehen? Elektrische Reize aktivieren Heilungsprozesse tief im Gewebe." data-en="Chronic pain that just won't go away? Electrical stimulation activates healing deep in the tissue.">Chronische Schmerzen, die einfach nicht weggehen? Elektrische Reize aktivieren Heilungsprozesse tief im Gewebe.</p>
         </article>
 
         <article class="service-card">
-          <div class="service-card__icon" aria-hidden="true">💬</div>
+          <div class="service-card__icon" aria-hidden="true">
+            <!-- message circle / consultation -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
           <h3 class="service-card__title" data-de="Beratung" data-en="Consultation">Beratung</h3>
-          <p class="service-card__desc" data-de="Ergonomieberatung, Heimübungsprogramme und Gesundheitstipps für den Alltag." data-en="Ergonomics advice, home exercise programs, and health tips for everyday life.">Ergonomieberatung, Heimübungsprogramme und Gesundheitstipps für den Alltag.</p>
+          <p class="service-card__desc" data-de="Nicht sicher, was Ihnen hilft? Wir hören zu, analysieren Ihre Situation und erstellen einen Therapieplan, der zu Ihrem Alltag passt." data-en="Not sure what will help? We listen, assess your situation and create a plan that fits your life.">Nicht sicher, was Ihnen hilft? Wir hören zu, analysieren Ihre Situation und erstellen einen Therapieplan, der zu Ihrem Alltag passt.</p>
         </article>
 
       </div>
@@ -97,12 +122,12 @@
   </section>
 
   <!-- ===== ABOUT ===== -->
-  <section class="section section--alt" id="ueber-uns">
+  <section class="section section--white" id="ueber-uns">
     <div class="container">
       <div class="about">
         <div class="about__image">
           <div class="about__photo-placeholder" aria-label="Foto Therapeutin/Therapeut">
-            <span aria-hidden="true">🧑‍⚕️</span>
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
         </div>
         <div class="about__text">
@@ -121,37 +146,63 @@
   </section>
 
   <!-- ===== CONTACT ===== -->
-  <section class="section" id="kontakt">
+  <section class="section section--alt" id="kontakt">
     <div class="container">
       <p class="section__eyebrow" data-de="So erreichen Sie uns" data-en="Get in touch">So erreichen Sie uns</p>
       <h2 class="section__title" data-de="Kontakt & Anfahrt" data-en="Contact & Location">Kontakt & Anfahrt</h2>
+
+      <!-- Lead with phone + booking CTAs -->
+      <div class="contact-ctas">
+        <a href="tel:+4912345678" class="contact-cta contact-cta--call">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div>
+            <span class="contact-cta__label" data-de="Jetzt anrufen" data-en="Call now">Jetzt anrufen</span>
+            <span class="contact-cta__sub">+49 123 45678</span>
+          </div>
+        </a>
+        <a href="#contactForm" class="contact-cta contact-cta--book">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <div>
+            <span class="contact-cta__label" data-de="Termin anfragen" data-en="Request appointment">Termin anfragen</span>
+            <span class="contact-cta__sub" data-de="Per Formular – Antwort in 24h" data-en="Via form – reply within 24h">Per Formular – Antwort in 24h</span>
+          </div>
+        </a>
+      </div>
 
       <div class="contact-grid">
 
         <div class="contact-info">
           <div class="contact-info__item">
-            <div class="contact-info__icon-wrap" aria-hidden="true">📍</div>
+            <div class="contact-info__icon-wrap" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
             <div>
               <strong data-de="Adresse" data-en="Address">Adresse</strong>
               <p>Musterstraße 1<br />12345 Musterstadt</p>
             </div>
           </div>
           <div class="contact-info__item">
-            <div class="contact-info__icon-wrap" aria-hidden="true">📞</div>
+            <div class="contact-info__icon-wrap" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
             <div>
               <strong data-de="Telefon" data-en="Phone">Telefon</strong>
               <p><a href="tel:+4912345678">+49 123 45678</a></p>
             </div>
           </div>
           <div class="contact-info__item">
-            <div class="contact-info__icon-wrap" aria-hidden="true">✉️</div>
+            <div class="contact-info__icon-wrap" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
             <div>
               <strong data-de="E-Mail" data-en="Email">E-Mail</strong>
               <p><a href="mailto:info@physiotoni.de">info@physiotoni.de</a></p>
             </div>
           </div>
           <div class="contact-info__item">
-            <div class="contact-info__icon-wrap" aria-hidden="true">🕐</div>
+            <div class="contact-info__icon-wrap" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
             <div>
               <strong data-de="Öffnungszeiten" data-en="Opening hours">Öffnungszeiten</strong>
               <p data-de="Mo–Fr: 8:00 – 18:00 Uhr<br />Sa: nach Vereinbarung" data-en="Mon–Fri: 8:00 am – 6:00 pm<br />Sat: by appointment">Mo–Fr: 8:00 – 18:00 Uhr<br />Sa: nach Vereinbarung</p>
@@ -159,9 +210,9 @@
           </div>
         </div>
 
-        <div class="contact-form-wrap">
-          <h3 class="contact-form-wrap__title" data-de="Nachricht senden" data-en="Send a message">Nachricht senden</h3>
-          <form class="contact-form" id="contactForm" novalidate>
+        <div class="contact-form-wrap" id="contactForm">
+          <h3 class="contact-form-wrap__title" data-de="Oder schreiben Sie uns" data-en="Or send us a message">Oder schreiben Sie uns</h3>
+          <form class="contact-form" id="contactFormEl" novalidate>
             <label class="form-label" for="name" data-de="Name" data-en="Name">Name</label>
             <input class="form-input" type="text" id="name" name="name" autocomplete="name" required />
 
@@ -190,7 +241,7 @@
           ></iframe>
           <!-- TODO: add Google Maps embed URL to the src attribute above -->
           <div class="map-placeholder" aria-hidden="true">
-            <span>📍</span>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <p data-de="Karte folgt" data-en="Map coming soon">Karte folgt</p>
           </div>
         </div>
@@ -209,6 +260,12 @@
       </nav>
     </div>
   </footer>
+
+  <!-- Floating call button — mobile only -->
+  <a href="tel:+4912345678" class="fab" aria-label="Anrufen">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span data-de="Anrufen" data-en="Call">Anrufen</span>
+  </a>
 
   <script src="script.js"></script>
 </body>

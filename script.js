@@ -63,7 +63,7 @@
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // ===== CONTACT FORM (demo handler) =====
-  const contactForm = document.getElementById('contactForm');
+  const contactForm = document.getElementById('contactFormEl');
   if (contactForm) {
     contactForm.addEventListener('submit', e => {
       e.preventDefault();
