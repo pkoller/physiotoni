@@ -12,29 +12,38 @@
 </head>
 <body>
 
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar" id="nav">
+    <a href="#top" class="logo">PhysioToni</a>
+    <nav class="sidebar__nav" aria-label="Hauptnavigation">
+      <a href="#leistungen" class="nav__link" data-de="Physio allgemein" data-en="General physiotherapy">Physio allgemein</a>
+      <a href="#hausbesuche" class="nav__link" data-de="Hausbesuche" data-en="Home visits">Hausbesuche</a>
+      <a href="#ueber-uns" class="nav__link" data-de="Über mich" data-en="About me">Über mich</a>
+      <a href="#kontakt" class="nav__link" data-de="Kontakt" data-en="Contact">Kontakt</a>
+    </nav>
+  </aside>
+
   <!-- ===== HEADER ===== -->
   <header class="header" id="top">
     <div class="container header__inner">
-      <a href="#top" class="logo">PhysioToni</a>
-
-      <nav class="nav" id="nav">
-        <a href="#leistungen" class="nav__link" data-de="Leistungen" data-en="Services">Leistungen</a>
-        <a href="#ueber-uns" class="nav__link" data-de="Über uns" data-en="About">Über uns</a>
-        <a href="#kontakt" class="nav__link" data-de="Kontakt" data-en="Contact">Kontakt</a>
-      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="#top" class="logo logo--mobile">PhysioToni</a>
 
       <div class="header__actions">
         <a href="tel:+4912345678" class="header__phone">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           +49 123 45678
         </a>
+        <a href="mailto:info@physiotoni.de" class="header__email">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span class="header__email-text">info@physiotoni.de</span>
+        </a>
         <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
           <span class="lang-toggle__active" id="langLabel">DE</span>
           <span class="lang-toggle__sep">|</span>
           <span class="lang-toggle__inactive" id="langOther">EN</span>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
@@ -43,13 +52,17 @@
   <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="hero__overlay"></div>
-    <div class="container hero__content">
-      <p class="hero__eyebrow" data-de="Physiotherapie in besten Händen" data-en="Physiotherapy at its best">Physiotherapie in besten Händen</p>
-      <h1 class="hero__title" data-de="Ihre Gesundheit in guten Händen" data-en="Your health in good hands">Ihre Gesundheit in guten Händen</h1>
-      <p class="hero__sub" data-de="Schmerzen, Verspannungen, Verletzungen – wir helfen Ihnen, schnell und dauerhaft wieder beweglich zu werden." data-en="Pain, tension, injury — we help you move freely again, quickly and lastingly.">Schmerzen, Verspannungen, Verletzungen – wir helfen Ihnen, schnell und dauerhaft wieder beweglich zu werden.</p>
-      <div class="hero__ctas">
-        <a href="tel:+4912345678" class="btn btn--primary" data-de="Jetzt anrufen" data-en="Call now">Jetzt anrufen</a>
-        <a href="#contactForm" class="btn btn--ghost" data-de="Termin anfragen" data-en="Request appointment">Termin anfragen</a>
+    <div class="container hero__inner">
+      <div class="hero__image">
+        <img src="img/hero1.jpg" alt="Physiotherapeutin behandelt eine Patientin an der Halswirbelsäule" width="1000" height="1250" />
+      </div>
+      <div class="hero__content">
+        <h1 class="hero__title" data-de="Ihre Gesundheit in guten Händen" data-en="Your health in good hands">Ihre Gesundheit in guten Händen</h1>
+        <p class="hero__sub" data-de="Schmerzen, Verspannungen, Verletzungen – wir helfen Ihnen, schnell und dauerhaft wieder beweglich zu werden." data-en="Pain, tension, injury — we help you move freely again, quickly and lastingly.">Schmerzen, Verspannungen, Verletzungen – wir helfen Ihnen, schnell und dauerhaft wieder beweglich zu werden.</p>
+        <div class="hero__ctas">
+          <a href="tel:+4912345678" class="btn btn--primary" data-de="Jetzt anrufen" data-en="Call now">Jetzt anrufen</a>
+          <a href="#contactForm" class="btn btn--ghost" data-de="Termin anfragen" data-en="Request appointment">Termin anfragen</a>
+        </div>
       </div>
     </div>
   </section>
@@ -117,6 +130,28 @@
           <p class="service-card__desc" data-de="Nicht sicher, was Ihnen hilft? Wir hören zu, analysieren Ihre Situation und erstellen einen Therapieplan, der zu Ihrem Alltag passt." data-en="Not sure what will help? We listen, assess your situation and create a plan that fits your life.">Nicht sicher, was Ihnen hilft? Wir hören zu, analysieren Ihre Situation und erstellen einen Therapieplan, der zu Ihrem Alltag passt.</p>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HAUSBESUCHE ===== -->
+  <section class="section section--alt" id="hausbesuche">
+    <div class="container">
+      <div class="housecalls">
+        <div class="housecalls__text">
+          <p class="section__eyebrow" data-de="Mobil &amp; flexibel" data-en="Mobile &amp; flexible">Mobil &amp; flexibel</p>
+          <h2 class="section__title" data-de="Hausbesuche" data-en="Home visits">Hausbesuche</h2>
+          <p class="section__sub" data-de="Sie sind in Ihrer Mobilität eingeschränkt oder können nicht in die Praxis kommen? Dann komme ich gerne zu Ihnen – nach Hause, ins Pflegeheim oder in Ihre Einrichtung." data-en="Limited mobility, or unable to come to the practice? Then I will gladly come to you – at home, in a care home or in your facility.">Sie sind in Ihrer Mobilität eingeschränkt oder können nicht in die Praxis kommen? Dann komme ich gerne zu Ihnen – nach Hause, ins Pflegeheim oder in Ihre Einrichtung.</p>
+          <ul class="about__credentials">
+            <li data-de="Behandlung in Ihrer gewohnten Umgebung" data-en="Treatment in your familiar surroundings">Behandlung in Ihrer gewohnten Umgebung</li>
+            <li data-de="Mit ärztlicher Verordnung für Hausbesuche" data-en="With a doctor's prescription for home visits">Mit ärztlicher Verordnung für Hausbesuche</li>
+            <li data-de="Flexible Terminvereinbarung" data-en="Flexible appointment scheduling">Flexible Terminvereinbarung</li>
+          </ul>
+          <a href="#kontakt" class="btn btn--primary housecalls__cta" data-de="Hausbesuch anfragen" data-en="Request a home visit">Hausbesuch anfragen</a>
+        </div>
+        <div class="housecalls__panel" aria-hidden="true">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
       </div>
     </div>
   </section>

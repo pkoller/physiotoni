@@ -73,14 +73,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--clr-primary);
   margin-bottom: 0.75rem;
 }
-.section__eyebrow::before {
-  content: '';
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: var(--clr-primary-light);
-  border-radius: 2px;
-}
 .section__title {
   font-family: var(--font-heading);
   font-size: clamp(1.9rem, 4vw, 2.8rem);
@@ -221,31 +213,27 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   pointer-events: none;
 }
 .hero__overlay { display: none; }
-.hero__content {
+.hero__inner {
   position: relative;
   z-index: 1;
-  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4.5rem;
+  align-items: center;
   padding: 5rem 2rem;
+  width: 100%;
+}
+.hero__content {
+  color: #fff;
   max-width: 680px;
 }
-.hero__eyebrow {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  opacity: 0.75;
-  margin-bottom: 1.25rem;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-.hero__eyebrow::before {
-  content: '';
-  display: inline-block;
-  width: 28px;
-  height: 2px;
-  background: rgba(255,255,255,0.5);
-  border-radius: 2px;
+.hero__image img {
+  aspect-ratio: 3/4;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
 }
 .hero__title {
   font-family: var(--font-heading);
@@ -790,6 +778,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
   .about { gap: 3.5rem; }
   .housecalls { gap: 3.5rem; }
+  .hero__inner { gap: 3rem; }
 }
 
 /* ===== RESPONSIVE — 768px ===== */
@@ -816,7 +805,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hamburger { display: flex; }
 
   .hero { min-height: 78vh; }
-  .hero__content { padding: 4rem 1.25rem; }
+  .hero__inner { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.25rem 4rem; }
+  .hero__image { max-width: 220px; width: 100%; margin: 0 auto; }
+  .hero__image img { aspect-ratio: 1/1; }
   .hero__ctas { flex-direction: column; }
   .hero__ctas .btn { width: 100%; justify-content: center; }
 
