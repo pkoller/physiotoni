@@ -691,7 +691,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
   .header__phone { display: none; }
   .header__email-text { display: none; }
-  .logo--mobile { display: block; }
+  .header__inner { gap: 0.75rem; }
+  .logo--mobile { display: block; font-size: 1.15rem; }
 
   .sidebar {
     z-index: 300;
@@ -715,10 +716,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .testimonials-grid { grid-template-columns: 1fr; gap: 1rem; }
 
 
-  /* keep the divider panels straddling the section boundaries on mobile too */
-  #leistungen { padding: 4rem 0 8rem; }
-  #hausbesuche { padding: 8rem 0; }
-  #ueber-uns { padding: 8rem 0 4rem; }
+  /* keep the divider panels straddling the section boundaries on mobile too;
+     clearance scales with the panel height (90vw wide at 20:9 = 20.25vw half-height) */
+  #leistungen { padding: 4rem 0 calc(20.25vw + 3rem); }
+  #hausbesuche { padding: calc(20.25vw + 3rem) 0; }
+  #ueber-uns { padding: calc(20.25vw + 3rem) 0 4rem; }
 
   .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
   .map-wrap { grid-column: auto; }
