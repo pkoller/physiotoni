@@ -76,6 +76,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   text-transform: uppercase;
   color: var(--clr-primary);
   margin-bottom: 0.75rem;
+  scroll-margin-top: 6rem; /* clears the 68px sticky header when jumped to via nav anchor */
 }
 .section__title {
   font-family: var(--font-heading);
@@ -406,6 +407,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-radius: var(--radius);
   padding: 2rem 2rem 2.25rem;
   box-shadow: var(--shadow-sm);
+  scroll-margin-top: 6rem; /* clears the 68px sticky header when jumped to via "Termin anfragen" */
 }
 .contact-form-wrap__title {
   font-family: var(--font-heading);
