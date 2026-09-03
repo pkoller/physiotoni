@@ -40,12 +40,21 @@
     hamburger.setAttribute('aria-expanded', isOpen);
   });
 
-  // Close nav when a link is clicked
-  nav.querySelectorAll('.nav__link').forEach(link => {
+  // Close nav when a link is clicked (nav links or the logo)
+  nav.querySelectorAll('.nav__link, .logo').forEach(link => {
     link.addEventListener('click', () => {
       nav.classList.remove('is-open');
       hamburger.classList.remove('is-open');
       hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Logo scrolls to top. The header it points to (#top) is sticky, so it's
+  // always "in view" and the native anchor jump never actually scrolls.
+  document.querySelectorAll('.logo').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
 
