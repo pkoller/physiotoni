@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PhysioAntonia – Physiotherapie · Manuelle Therapie · Massage" />
+  <title>PhysioAntonia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#inhalt" data-de="Zum Inhalt springen" data-en="Skip to content">Zum Inhalt springen</a>
+
+  <!-- ===== TOPBAR ===== -->
+  <header class="topbar" id="topbar">
+    <div class="container topbar__inner">
+      <a href="#top" class="logo">Physio<span>Antonia</span></a>
+
+      <nav class="nav-panel" id="navPanel" aria-label="Hauptnavigation">
+        <a href="#leistungen-eyebrow" class="nav-link" data-de="Physiotherapie" data-en="Physiotherapy">Physiotherapie</a>
+        <a href="#hausbesuche-eyebrow" class="nav-link" data-de="Hausbesuche" data-en="Home visits">Hausbesuche</a>
+        <a href="#ueber-uns-title" class="nav-link" data-de="Über mich" data-en="About me">Über mich</a>
+        <a href="#kontakt-title" class="nav-link" data-de="Kontakt" data-en="Contact">Kontakt</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <a href="tel:+4912345678" class="topbar__phone">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +49 123 45678
+        </a>
+        <a href="mailto:hallo@physioantonia.at" class="topbar__email">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-toggle__active" id="langLabel">DE</span>
+          <span class="lang-toggle__sep">|</span>
+          <span class="lang-toggle__inactive" id="langOther">EN</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navPanel">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inhalt">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="hero__blob" aria-hidden="true"></div>
+    <div class="hero__glow" id="heroGlow" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="chip hero__badge" data-de="Physiotherapie Innsbruck" data-en="Physiotherapy Innsbruck">Physiotherapie Innsbruck</span>
+        <h1 class="hero__title">
+          <span class="line" data-de="Ihre Gesundheit" data-en="Your health">Ihre Gesundheit</span>
+          <span class="line hero__title--accent" data-de="in guten Händen." data-en="in good hands.">in guten Händen.</span>
+        </h1>
+        <p class="hero__sub" data-de="Schmerzen, Verspannungen, Verletzungen – wir helfen Ihnen, schnell und dauerhaft wieder beweglich zu werden." data-en="Pain, tension, injury — we help you move freely again, quickly and lastingly.">Schmerzen, Verspannungen, Verletzungen – wir helfen Ihnen, schnell und dauerhaft wieder beweglich zu werden.</p>
+        <div class="hero__ctas">
+          <a href="tel:+4912345678" class="btn btn--acid btn--magnetic" data-de="Jetzt anrufen" data-en="Call now">
+            Jetzt anrufen
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+          <a href="#contactForm" class="btn btn--outline btn--magnetic" data-de="Termin anfragen" data-en="Request appointment">Termin anfragen</a>
+        </div>
+      </div>
+      <div class="hero__image">
+        <div class="hero__image-frame">
+          <img src="img/hero1.jpg" alt="Physiotherapeutin behandelt eine Patientin an der Halswirbelsäule" width="1000" height="1250" />
+          <span class="hero__sticker" data-de="Anichstraße 34, Innsbruck" data-en="Anichstraße 34, Innsbruck">Anichstraße 34, Innsbruck</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <div class="marquee__group">
+        <span data-de="Physiotherapie" data-en="Physiotherapy">Physiotherapie</span><span class="marquee__dot">•</span>
+        <span data-de="Manuelle Therapie" data-en="Manual therapy">Manuelle Therapie</span><span class="marquee__dot">•</span>
+        <span data-de="Krankengymnastik" data-en="Therapeutic exercise">Krankengymnastik</span><span class="marquee__dot">•</span>
+        <span data-de="Massage" data-en="Massage">Massage</span><span class="marquee__dot">•</span>
+        <span data-de="Elektrotherapie" data-en="Electrotherapy">Elektrotherapie</span><span class="marquee__dot">•</span>
+        <span data-de="Hausbesuche" data-en="Home visits">Hausbesuche</span><span class="marquee__dot">•</span>
+        <span data-de="Rehabilitation" data-en="Rehabilitation">Rehabilitation</span><span class="marquee__dot">•</span>
+      </div>
+      <div class="marquee__group">
+        <span data-de="Physiotherapie" data-en="Physiotherapy">Physiotherapie</span><span class="marquee__dot">•</span>
+        <span data-de="Manuelle Therapie" data-en="Manual therapy">Manuelle Therapie</span><span class="marquee__dot">•</span>
+        <span data-de="Krankengymnastik" data-en="Therapeutic exercise">Krankengymnastik</span><span class="marquee__dot">•</span>
+        <span data-de="Massage" data-en="Massage">Massage</span><span class="marquee__dot">•</span>
+        <span data-de="Elektrotherapie" data-en="Electrotherapy">Elektrotherapie</span><span class="marquee__dot">•</span>
+        <span data-de="Hausbesuche" data-en="Home visits">Hausbesuche</span><span class="marquee__dot">•</span>
+        <span data-de="Rehabilitation" data-en="Rehabilitation">Rehabilitation</span><span class="marquee__dot">•</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PHYSIOTHERAPIE ===== -->
+  <section class="section section--cream" id="leistungen">
+    <div class="container">
+      <div class="section__head">
+        <span class="chip" id="leistungen-eyebrow" data-de="In Bewegung bleiben" data-en="Stay in motion">In Bewegung bleiben</span>
+        <h2 class="section__title" data-de="Physiotherapie und Rehabilitation" data-en="Physiotherapy and rehabilitation">Physiotherapie und Rehabilitation</h2>
+        <p class="section__sub" data-de="Ob Rückenschmerzen, Verspannungen, Sportverletzung oder Reha nach einer OP – mit manueller Therapie, Krankengymnastik, Massage und Elektrotherapie finden wir den richtigen Weg zurück zu Ihrer Gesundheit. Jede Behandlung wird individuell auf Ihre Beschwerden und Ziele abgestimmt." data-en="Whether back pain, tension, a sports injury or rehab after surgery – with manual therapy, therapeutic exercise, massage and electrotherapy we find the right path back to your health. Every treatment is individually tailored to your complaints and goals.">Ob Rückenschmerzen, Verspannungen, Sportverletzung oder Reha nach einer OP – mit manueller Therapie, Krankengymnastik, Massage und Elektrotherapie finden wir den richtigen Weg zurück zu Ihrer Gesundheit. Jede Behandlung wird individuell auf Ihre Beschwerden und Ziele abgestimmt.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HAUSBESUCHE ===== -->
+  <section class="section section--ink" id="hausbesuche">
+    <div class="container">
+      <div class="split">
+        <div class="split__text">
+          <span class="chip chip--coral" id="hausbesuche-eyebrow" data-de="Mobil &amp; flexibel" data-en="Mobile &amp; flexible">Mobil &amp; flexibel</span>
+          <h2 class="section__title" data-de="Hausbesuche" data-en="Home visits">Hausbesuche</h2>
+          <p class="section__sub" data-de="Sie sind in Ihrer Mobilität eingeschränkt oder können nicht in die Praxis kommen? Dann komme ich gerne zu Ihnen – nach Hause, ins Pflegeheim oder in Ihre Einrichtung." data-en="Limited mobility, or unable to come to the practice? Then I will gladly come to you – at home, in a care home or in your facility.">Sie sind in Ihrer Mobilität eingeschränkt oder können nicht in die Praxis kommen? Dann komme ich gerne zu Ihnen – nach Hause, ins Pflegeheim oder in Ihre Einrichtung.</p>
+          <ul class="check-list">
+            <li data-de="Behandlung in Ihrer gewohnten Umgebung" data-en="Treatment in your familiar surroundings">Behandlung in Ihrer gewohnten Umgebung</li>
+            <li data-de="Mit ärztlicher Verordnung für Hausbesuche" data-en="With a doctor's prescription for home visits">Mit ärztlicher Verordnung für Hausbesuche</li>
+            <li data-de="Flexible Terminvereinbarung" data-en="Flexible appointment scheduling">Flexible Terminvereinbarung</li>
+          </ul>
+        </div>
+        <div class="split__panel" aria-hidden="true">
+          <div class="split__panel-inner">
+            <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section section--cream" id="ueber-uns">
+    <div class="container">
+      <div class="split">
+        <div class="split__panel" aria-hidden="true">
+          <div class="split__panel-inner">
+            <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+        </div>
+        <div class="split__text">
+          <h2 class="section__title" id="ueber-uns-title" data-de="Über mich" data-en="About me">Über mich</h2>
+          <p class="section__sub" data-de="Mit langjähriger Erfahrung und umfangreicher Fachausbildung begleite ich Sie auf dem Weg zu mehr Gesundheit und Wohlbefinden. Jede Therapie wird individuell auf Ihre Beschwerden und Ziele abgestimmt – mit Zeit, Sorgfalt und einem ganzheitlichen Blick auf Ihren Körper." data-en="With years of experience and extensive specialist training, I guide you towards better health and well-being. Every therapy is individually tailored to your complaints and goals – with time, care, and a holistic view of your body.">Mit langjähriger Erfahrung und umfangreicher Fachausbildung begleite ich Sie auf dem Weg zu mehr Gesundheit und Wohlbefinden. Jede Therapie wird individuell auf Ihre Beschwerden und Ziele abgestimmt – mit Zeit, Sorgfalt und einem ganzheitlichen Blick auf Ihren Körper.</p>
+          <ul class="check-list">
+            <li data-de="Staatlich geprüfte/r PhysiotherapeutIn" data-en="State-certified physiotherapist">Staatlich geprüfte/r PhysiotherapeutIn</li>
+            <li data-de="Zertifizierte Manuelle Therapie (OMT)" data-en="Certified manual therapy (OMT)">Zertifizierte Manuelle Therapie (OMT)</li>
+            <li data-de="Sportphysiotherapie (DOSB)" data-en="Sports physiotherapy (DOSB)">Sportphysiotherapie (DOSB)</li>
+            <li data-de="Fortbildungen in Dry Needling &amp; Faszientherapie" data-en="Advanced training in dry needling &amp; fascia therapy">Fortbildungen in Dry Needling &amp; Faszientherapie</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section section--ink" id="kontakt">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title" id="kontakt-title" data-de="Kontakt &amp; Anfahrt" data-en="Contact &amp; Location">Kontakt &amp; Anfahrt</h2>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <div class="contact-info__item">
+            <div class="contact-info__icon-wrap" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <strong data-de="Adresse" data-en="Address">Adresse</strong>
+              <p>Anichstraße 34<br />6020 Innsbruck</p>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div class="contact-info__icon-wrap" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <strong data-de="Telefon" data-en="Phone">Telefon</strong>
+              <p><a href="tel:+4912345678">+49 123 45678</a></p>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div class="contact-info__icon-wrap" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <strong data-de="E-Mail" data-en="Email">E-Mail</strong>
+              <p><a href="mailto:hallo@physioantonia.at">hallo@physioantonia.at</a></p>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div class="contact-info__icon-wrap" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <strong data-de="Website" data-en="Website">Website</strong>
+              <p><a href="https://www.tzaphysio.at/" target="_blank" rel="noopener">tzaphysio.at</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap" id="contactForm">
+          <h3 class="contact-form-wrap__title" data-de="Oder schreiben Sie uns" data-en="Or send us a message">Oder schreiben Sie uns</h3>
+          <form class="contact-form" id="contactFormEl" novalidate>
+            <label class="form-label" for="name" data-de="Name" data-en="Name">Name</label>
+            <input class="form-input" type="text" id="name" name="name" autocomplete="name" required />
+
+            <label class="form-label" for="email" data-de="E-Mail" data-en="Email">E-Mail</label>
+            <input class="form-input" type="email" id="email" name="email" autocomplete="email" required />
+
+            <label class="form-label" for="message" data-de="Nachricht" data-en="Message">Nachricht</label>
+            <textarea class="form-input form-input--textarea" id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" class="btn btn--acid btn--magnetic" data-de="Senden" data-en="Send">Senden</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="map-wrap">
+        <iframe
+          class="map"
+          src="https://www.google.com/maps?q=Anichstra%C3%9Fe%2034%2C%206020%20Innsbruck&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Standort PhysioAntonia"
+        ></iframe>
+        <div class="map-placeholder" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <p data-de="Karte folgt" data-en="Map coming soon">Karte folgt</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <span class="footer__word" aria-hidden="true">PhysioAntonia</span>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; <span id="year"></span> PhysioAntonia</p>
+        <nav class="footer__nav">
+          <a href="impressum.html" data-de="Impressum" data-en="Legal notice">Impressum</a>
+          <a href="datenschutz.html" data-de="Datenschutz" data-en="Privacy policy">Datenschutz</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating call button — mobile only -->
+  <a href="tel:+4912345678" class="fab" aria-label="Anrufen">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span data-de="Anrufen" data-en="Call">Anrufen</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
