@@ -127,22 +127,32 @@
     revealTargets.forEach(el => revealObserver.observe(el));
 
     // ===== NAV ACTIVE SECTION =====
+    // Observe the whole <section>, not just the small anchor target it
+    // scrolls to — a nav click lands the anchor right under the sticky
+    // header, which sits outside a narrow "currently in view" band and
+    // would otherwise never light up.
     const navLinks = Array.from(document.querySelectorAll('.sidebar .nav__link'));
-    const sectionForLink = id => navLinks.find(l => l.getAttribute('href') === '#' + id);
+    const linkForSection = new WeakMap();
+
+    navLinks.forEach(link => {
+      const target = document.querySelector(link.getAttribute('href'));
+      const section = target && target.closest('section');
+      if (section) linkForSection.set(section, link);
+    });
 
     const sectionObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        const link = sectionForLink(entry.target.id);
+        if (!entry.isIntersecting) return;
+        const link = linkForSection.get(entry.target);
         if (!link) return;
-        if (entry.isIntersecting) {
-          navLinks.forEach(l => l.classList.remove('is-active'));
-          link.classList.add('is-active');
-        }
+        navLinks.forEach(l => l.classList.remove('is-active'));
+        link.classList.add('is-active');
       });
-    }, { rootMargin: '-30% 0px -60% 0px' });
+    }, { rootMargin: '-72px 0px -55% 0px' });
 
     navLinks.forEach(link => {
-      const section = document.querySelector(link.getAttribute('href'));
+      const target = document.querySelector(link.getAttribute('href'));
+      const section = target && target.closest('section');
       if (section) sectionObserver.observe(section);
     });
   }
