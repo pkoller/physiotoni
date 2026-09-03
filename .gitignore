@@ -1,4 +1,9 @@
-.claude/
+.claude/*
+!.claude/skills
+.claude/skills/*
+!.claude/skills/emil-design-eng
+!.claude/skills/design-taste-frontend
+!.claude/skills/redesign-existing-projects
 media/
 .agents/
 skills-lock.json
