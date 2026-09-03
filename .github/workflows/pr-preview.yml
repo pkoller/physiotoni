@@ -14,9 +14,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # rossjrw/pr-preview-action deploys via JamesIves/github-pages-deploy-action,
+      # which stages the commit through a git worktree it creates at
+      # $GITHUB_WORKSPACE/github-pages-deploy-action-temp-deployment-folder —
+      # i.e. INSIDE whatever directory source-dir points to. Pointing
+      # source-dir at the checkout root ('.') means that worktree (which is
+      # a checkout of the existing gh-pages branch) gets copied into itself
+      # on every run, nesting one more generation of every past PR preview
+      # each time (see pr-preview/pr-4 and pr-preview/pr-5 on gh-pages
+      # before this fix — each contained a full nested copy of the ones
+      # before it). Staging only the real site files into an isolated
+      # directory the deploy action has no reason to touch avoids the
+      # overlap entirely, regardless of where that worktree lands.
+      - name: Assemble preview source
+        run: |
+          mkdir -p _pr-preview-src
+          cp index.html style.css script.js impressum.html datenschutz.html _pr-preview-src/
+          cp -r img _pr-preview-src/
+
       - uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ./
+          source-dir: _pr-preview-src
 
   remove-preview:
     if: github.event.action == 'closed'
