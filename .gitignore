@@ -1,2 +1,4 @@
 .claude/
 media/
+.agents/
+skills-lock.json
