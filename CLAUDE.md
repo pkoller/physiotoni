@@ -66,7 +66,8 @@ Every visible text element that differs between languages carries both:
 Public repo: `https://github.com/pkoller/physiotoni` — branch `master`.
 Live site: `https://pkoller.github.io/physiotoni`
 Push with: `git add index.html style.css script.js && git commit -m "..." && git push`
-GitHub Pages deploys automatically on push to `master`.
+GitHub Pages is served from the `gh-pages` branch, published by `.github/workflows/pages-deploy.yml` on every push to `master` (one-time repo setting: Settings → Pages → Build and deployment → Source → Deploy from a branch → `gh-pages` / `/ (root)`).
+Every pull request also gets a live preview at `https://pkoller.github.io/physiotoni/pr-preview/pr-<number>/`, deployed by `.github/workflows/pr-preview.yml` (via `rossjrw/pr-preview-action`) and linked in a PR comment; it's torn down when the PR closes.
 Don't commit the `.claude/` or `media/` folders (both in `.gitignore`).
 
 ## What NOT to do
