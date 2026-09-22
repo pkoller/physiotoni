@@ -367,7 +367,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .about__credentials li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  max-width: 720px;
+  line-height: 1.6;
+  text-wrap: pretty;
   gap: 0.75rem;
   font-size: 0.9rem;
   font-weight: 500;
@@ -380,7 +383,27 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-radius: 50%;
   background: var(--clr-primary);
   flex-shrink: 0;
+  margin-top: calc(0.8em - 3.5px); /* centers the dot on the first line of multi-line items */
 }
+.section__subhead {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--clr-dark);
+  text-wrap: balance;
+  margin: 2.25rem 0 1rem;
+}
+.section__sub:has(+ .section__subhead) { margin-bottom: 2rem; }
+.section__sub + .section__subhead { margin-top: 0; }
+.section__sub--after-list { margin-top: 2.25rem; }
+.about__text > p {
+  max-width: 720px;
+  color: var(--clr-muted);
+  line-height: 1.75;
+  text-wrap: pretty;
+  margin-bottom: 0.9rem;
+}
+.about__text > p:last-child { margin-bottom: 0; }
 
 /* ===== CONTACT ===== */
 .contact-grid {
@@ -486,6 +509,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .form-input--textarea { resize: vertical; min-height: 110px; }
 .contact-form .btn { align-self: flex-start; margin-top: 0.5rem; }
+.contact-form-wrap__note {
+  margin-top: 1.5rem;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--clr-muted);
+  text-wrap: pretty;
+}
 
 /* ===== MAP ===== */
 .map-wrap {
