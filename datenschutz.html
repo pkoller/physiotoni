@@ -82,7 +82,7 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="footer__copy">&copy; 2026 PhysioAntonia</p>
+      <p class="footer__copy">&copy; <span id="year">2026</span> PhysioAntonia</p>
       <nav class="footer__nav">
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
@@ -90,5 +90,6 @@
     </div>
   </footer>
 
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
