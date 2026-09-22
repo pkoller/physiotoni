@@ -396,14 +396,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .section__sub:has(+ .section__subhead) { margin-bottom: 2rem; }
 .section__sub + .section__subhead { margin-top: 0; }
 .section__sub--after-list { margin-top: 2.25rem; }
-.about__text > p {
-  max-width: 720px;
-  color: var(--clr-muted);
-  line-height: 1.75;
-  text-wrap: pretty;
-  margin-bottom: 0.9rem;
-}
-.about__text > p:last-child { margin-bottom: 0; }
+
+/* ===== KOSTENÜBERNAHME ===== */
+#kosten .section__sub { max-width: 720px; margin-bottom: 1rem; }
+#kosten .section__sub:last-child { margin-bottom: 0; }
 
 /* ===== CONTACT ===== */
 .contact-grid {
