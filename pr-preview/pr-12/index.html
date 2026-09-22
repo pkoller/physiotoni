@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PhysioAntonia – Physiotherapie, Rehabilitation und Hausbesuche in Innsbruck" />
+  <title>PhysioAntonia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#inhalt" data-de="Zum Inhalt springen" data-en="Skip to content">Zum Inhalt springen</a>
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar" id="nav">
+    <a href="#top" class="logo">PhysioAntonia</a>
+    <nav class="sidebar__nav" aria-label="Hauptnavigation">
+      <a href="#leistungen-eyebrow" class="nav__link" data-de="Physiotherapie" data-en="Physiotherapy">Physiotherapie</a>
+      <a href="#hausbesuche-eyebrow" class="nav__link" data-de="Hausbesuche" data-en="Home visits">Hausbesuche</a>
+      <a href="#ueber-uns-title" class="nav__link" data-de="Über mich" data-en="About me">Über mich</a>
+      <a href="#kontakt-title" class="nav__link" data-de="Kontakt" data-en="Contact">Kontakt</a>
+    </nav>
+  </aside>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="#top" class="logo logo--mobile">PhysioAntonia</a>
+
+      <div class="header__actions">
+        <a href="tel:+4912345678" class="header__phone">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +49 123 45678
+        </a>
+        <a href="mailto:hallo@physioantonia.at" class="header__email">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span class="header__email-text">hallo@physioantonia.at</span>
+        </a>
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-toggle__active" id="langLabel">DE</span>
+          <span class="lang-toggle__sep">|</span>
+          <span class="lang-toggle__inactive" id="langOther">EN</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inhalt">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__overlay"></div>
+    <div class="container hero__inner">
+      <div class="hero__image">
+        <img src="img/hero1.jpg" alt="Physiotherapeutin behandelt eine Patientin an der Halswirbelsäule" width="1000" height="1250" />
+      </div>
+      <div class="hero__content">
+        <h1 class="hero__title" data-de="Ihre Gesundheit in guten Händen" data-en="Your health in good hands">Ihre Gesundheit in guten Händen</h1>
+        <p class="hero__sub" data-de="Nach einer Operation, einem Unfall oder bei Schmerzen und eingeschränkter Mobilität – mit individueller Betreuung finden wir gemeinsam zurück zu mehr Kraft, Beweglichkeit und Lebensqualität." data-en="After surgery or an accident, or with pain and limited mobility – with individual care, together we find our way back to more strength, mobility and quality of life.">Nach einer Operation, einem Unfall oder bei Schmerzen und eingeschränkter Mobilität – mit individueller Betreuung finden wir gemeinsam zurück zu mehr Kraft, Beweglichkeit und Lebensqualität.</p>
+        <div class="hero__ctas">
+          <a href="tel:+4912345678" class="btn btn--primary" data-de="Jetzt anrufen" data-en="Call now">Jetzt anrufen</a>
+          <a href="#contactForm" class="btn btn--ghost" data-de="Termin anfragen" data-en="Request appointment">Termin anfragen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section section--white" id="leistungen">
+    <div class="container">
+      <p class="section__eyebrow" id="leistungen-eyebrow" data-de="In Bewegung bleiben" data-en="Stay in motion">In Bewegung bleiben</p>
+      <h2 class="section__title" data-de="Physiotherapie und Rehabilitation" data-en="Physiotherapy and rehabilitation">Physiotherapie und Rehabilitation</h2>
+      <p class="section__sub" data-de="Ich begleite Sie bei Beschwerden des Bewegungsapparates, nach Unfällen und Operationen sowie bei chronischen Schmerzen. Auch nach Stürzen oder bei altersbedingten Bewegungseinschränkungen helfe ich Ihnen dabei, wieder Sicherheit und Vertrauen in Ihren Körper zu gewinnen." data-en="I support you with musculoskeletal complaints, after accidents and surgery, and with chronic pain. After falls or with age-related limitations in movement, I also help you regain confidence and trust in your body.">Ich begleite Sie bei Beschwerden des Bewegungsapparates, nach Unfällen und Operationen sowie bei chronischen Schmerzen. Auch nach Stürzen oder bei altersbedingten Bewegungseinschränkungen helfe ich Ihnen dabei, wieder Sicherheit und Vertrauen in Ihren Körper zu gewinnen.</p>
+      <h3 class="section__subhead" data-de="Behandlung bzw. Nachbehandlung von:" data-en="Treatment and aftercare for:">Behandlung bzw. Nachbehandlung von:</h3>
+      <ul class="about__credentials">
+        <li data-de="Knochenbrüchen (z.B. Oberschenkelhalsbruch, Unterarmbruch, Stressfrakturen, …)" data-en="Bone fractures (e.g. femoral neck fracture, forearm fracture, stress fractures, …)">Knochenbrüchen (z.B. Oberschenkelhalsbruch, Unterarmbruch, Stressfrakturen, …)</li>
+        <li data-de="Verletzungen oder Operationen des Kniegelenks (z.B. Kreuzband, Meniskus, Außen- oder Innenband, Einsatz eines künstlichen Gelenks, …)" data-en="Knee injuries or surgery (e.g. cruciate ligament, meniscus, lateral or medial collateral ligament, joint replacement, …)">Verletzungen oder Operationen des Kniegelenks (z.B. Kreuzband, Meniskus, Außen- oder Innenband, Einsatz eines künstlichen Gelenks, …)</li>
+        <li data-de="Verletzungen oder Operationen des Fußgelenks (z.B. Subluxation des Sprunggelenks „Umknicken“, Bänderrisse, Hallux valgus, …)" data-en="Ankle and foot injuries or surgery (e.g. ankle subluxation or “rolled ankle”, torn ligaments, hallux valgus, …)">Verletzungen oder Operationen des Fußgelenks (z.B. Subluxation des Sprunggelenks „Umknicken“, Bänderrisse, Hallux valgus, …)</li>
+        <li data-de="Verletzungen oder Operationen des Schultergelenks (z.B. Rotatorenmanschettenriss, Luxation des Schultergelenks, …)" data-en="Shoulder injuries or surgery (e.g. rotator cuff tear, shoulder dislocation, …)">Verletzungen oder Operationen des Schultergelenks (z.B. Rotatorenmanschettenriss, Luxation des Schultergelenks, …)</li>
+        <li data-de="Muskel-, Sehnen- oder Bänderverletzungen oder -überlastung (z.B. Tennisellbogen, Muskelfaserriss oder -zerrung, …)" data-en="Muscle, tendon or ligament injuries or overuse (e.g. tennis elbow, torn or strained muscle fibres, …)">Muskel-, Sehnen- oder Bänderverletzungen oder -überlastung (z.B. Tennisellbogen, Muskelfaserriss oder -zerrung, …)</li>
+        <li data-de="Verletzungen oder Unsicherheiten nach Stürzen" data-en="Injuries or unsteadiness after falls">Verletzungen oder Unsicherheiten nach Stürzen</li>
+        <li data-de="Allgemeinen Gang- und Bewegungsunsicherheiten" data-en="General unsteadiness when walking or moving">Allgemeinen Gang- und Bewegungsunsicherheiten</li>
+        <li data-de="Überlastungsbeschwerden (z.B. Rückenschmerzen, Impingement der Schulter, Nackenschmerzen, …)" data-en="Overuse complaints (e.g. back pain, shoulder impingement, neck pain, …)">Überlastungsbeschwerden (z.B. Rückenschmerzen, Impingement der Schulter, Nackenschmerzen, …)</li>
+      </ul>
+      <p class="section__sub section__sub--after-list" data-de="Als Sportwissenschaftlerin und Physiotherapeutin verbinde ich fundiertes medizinisches Wissen mit einem aktiven, bewegungsorientierten Ansatz. Mein Ziel ist es, Beweglichkeit, Kraft und Belastbarkeit zu verbessern – für mehr Aktivität im Alltag oder eine erfolgreiche Rückkehr zum Sport." data-en="As a sports scientist and physiotherapist, I combine sound medical knowledge with an active, movement-based approach. My goal is to improve your mobility, strength and resilience – for a more active everyday life or a successful return to sport.">Als Sportwissenschaftlerin und Physiotherapeutin verbinde ich fundiertes medizinisches Wissen mit einem aktiven, bewegungsorientierten Ansatz. Mein Ziel ist es, Beweglichkeit, Kraft und Belastbarkeit zu verbessern – für mehr Aktivität im Alltag oder eine erfolgreiche Rückkehr zum Sport.</p>
+
+    </div>
+  </section>
+
+  <!-- ===== HAUSBESUCHE ===== -->
+  <section class="section section--alt" id="hausbesuche">
+    <div class="container">
+      <div class="housecalls">
+        <div class="housecalls__text">
+          <p class="section__eyebrow" id="hausbesuche-eyebrow" data-de="Mobil &amp; flexibel" data-en="Mobile &amp; flexible">Mobil &amp; flexibel</p>
+          <h2 class="section__title" data-de="Hausbesuche" data-en="Home visits">Hausbesuche</h2>
+          <p class="section__sub" data-de="Sie sind in Ihrer Mobilität eingeschränkt oder können nicht in die Praxis kommen? Dann komme ich gerne zu Ihnen – nach Hause, ins Pflegeheim oder in Ihre Einrichtung. Zurzeit beschränkt sich mein Radius auf Innsbruck Stadt." data-en="Limited mobility, or unable to come to the practice? Then I will gladly come to you – at home, in a care home or in your facility. At the moment I cover the city of Innsbruck.">Sie sind in Ihrer Mobilität eingeschränkt oder können nicht in die Praxis kommen? Dann komme ich gerne zu Ihnen – nach Hause, ins Pflegeheim oder in Ihre Einrichtung. Zurzeit beschränkt sich mein Radius auf Innsbruck Stadt.</p>
+          <p class="section__sub" data-de="Wichtig ist, dass der Hausbesuch auf der ärztlichen Verordnung ausdrücklich vermerkt wird. Nur dann werden die Kosten des Hausbesuchs von der Krankenkasse übernommen." data-en="It is important that the home visit is explicitly noted on the doctor's prescription. Only then will the health insurance cover the costs of the home visit.">Wichtig ist, dass der Hausbesuch auf der ärztlichen Verordnung ausdrücklich vermerkt wird. Nur dann werden die Kosten des Hausbesuchs von der Krankenkasse übernommen.</p>
+        </div>
+        <div class="housecalls__panel" aria-hidden="true">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section section--white" id="ueber-uns">
+    <div class="container">
+      <div class="about">
+        <div class="about__image">
+          <div class="about__photo-placeholder" aria-label="Foto Therapeutin/Therapeut">
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+        </div>
+        <div class="about__text">
+          <h2 class="section__title" id="ueber-uns-title" data-de="Über mich" data-en="About me">Über mich</h2>
+          <ul class="about__credentials">
+            <li data-de="Ausbildung zur Physiotherapeutin an der FH Joanneum in Graz, 2014–2017" data-en="Physiotherapy degree at FH Joanneum, Graz, 2014–2017">Ausbildung zur Physiotherapeutin an der FH Joanneum in Graz, 2014–2017</li>
+            <li data-de="Studium der Sportwissenschaften an der Universität Innsbruck, 2018–2021" data-en="Sports science studies at the University of Innsbruck, 2018–2021">Studium der Sportwissenschaften an der Universität Innsbruck, 2018–2021</li>
+            <li data-de="Parallel dazu Arbeit als Physiotherapeutin in einem Therapieinstitut in Innsbruck" data-en="Alongside this, work as a physiotherapist at a therapy institute in Innsbruck">Parallel dazu Arbeit als Physiotherapeutin in einem Therapieinstitut in Innsbruck</li>
+            <li data-de="Physiotherapeutin des ÖSV Ski Alpin Teams der Damen, 2021–2024" data-en="Physiotherapist for the Austrian Ski Federation (ÖSV) women's alpine ski team, 2021–2024">Physiotherapeutin des ÖSV Ski Alpin Teams der Damen, 2021–2024</li>
+            <li data-de="Selbständige Physiotherapeutin im Therapiezentrum Anichstraße in Innsbruck seit 2025" data-en="Self-employed physiotherapist at Therapiezentrum Anichstraße in Innsbruck since 2025">Selbständige Physiotherapeutin im Therapiezentrum Anichstraße in Innsbruck seit 2025</li>
+          </ul>
+          <h3 class="section__subhead" data-de="Weiterbildungen" data-en="Further training">Weiterbildungen</h3>
+          <ul class="about__credentials">
+            <li data-de="Manuelle Therapie nach Scheuerer" data-en="Manual therapy (Scheuerer method)">Manuelle Therapie nach Scheuerer</li>
+            <li data-de="Basiskurs Sportphysiotherapie" data-en="Basic course in sports physiotherapy">Basiskurs Sportphysiotherapie</li>
+            <li data-de="Ausbildung Seniorenvitalcoach" data-en="Training as a senior vitality coach">Ausbildung Seniorenvitalcoach</li>
+            <li data-de="Intensivkurs Demenz" data-en="Intensive course on dementia">Intensivkurs Demenz</li>
+            <li data-de="Ausbildung zur Yogalehrerin" data-en="Yoga teacher training">Ausbildung zur Yogalehrerin</li>
+          </ul>
+          <h3 class="section__subhead" data-de="Verordnung &amp; Kosten" data-en="Prescription &amp; costs">Verordnung &amp; Kosten</h3>
+          <p data-de="Vor Therapiebeginn benötigen Sie eine Verordnung (Überweisung) eines/r Hausärzt*in oder Fachärzt*in." data-en="Before therapy begins, you need a prescription (referral) from a general practitioner or specialist.">Vor Therapiebeginn benötigen Sie eine Verordnung (Überweisung) eines/r Hausärzt*in oder Fachärzt*in.</p>
+          <p data-de="Da ich als Wahltherapeutin tätig bin, übernimmt die Krankenkasse in der Regel nur einen Teil der Behandlungskosten. Die Höhe davon hängt von Ihrer jeweiligen Krankenkasse ab. Der verbleibende Betrag muss selbst bezahlt werden oder kann von einer Zusatz- bzw. Unfallversicherung übernommen werden." data-en="As I work as an elective (non-contracted) therapist, health insurance usually covers only part of the treatment costs. The amount depends on your health insurance provider. The remaining amount must be paid privately or may be covered by supplementary or accident insurance.">Da ich als Wahltherapeutin tätig bin, übernimmt die Krankenkasse in der Regel nur einen Teil der Behandlungskosten. Die Höhe davon hängt von Ihrer jeweiligen Krankenkasse ab. Der verbleibende Betrag muss selbst bezahlt werden oder kann von einer Zusatz- bzw. Unfallversicherung übernommen werden.</p>
+          <p data-de="Je nach Krankenversicherung kann für die Kostenrückerstattung eine Bewilligung erforderlich sein, vor allem bei Hausbesuchen. Bitte informieren Sie sich bei Ihrer Krankenkasse über die für Sie geltenden Bestimmungen." data-en="Depending on your insurance, approval may be required for reimbursement, especially for home visits. Please check with your health insurance provider which terms apply to you.">Je nach Krankenversicherung kann für die Kostenrückerstattung eine Bewilligung erforderlich sein, vor allem bei Hausbesuchen. Bitte informieren Sie sich bei Ihrer Krankenkasse über die für Sie geltenden Bestimmungen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section section--alt" id="kontakt">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-intro">
+          <h2 class="section__title" id="kontakt-title" data-de="Kontakt & Anfahrt" data-en="Contact & Location">Kontakt & Anfahrt</h2>
+
+          <div class="contact-info">
+          <div class="contact-info__item">
+            <div class="contact-info__icon-wrap" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <strong data-de="Adresse" data-en="Address">Adresse</strong>
+              <p>Anichstraße 34<br />6020 Innsbruck</p>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div class="contact-info__icon-wrap" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <strong data-de="Telefon" data-en="Phone">Telefon</strong>
+              <p><a href="tel:+4912345678">+49 123 45678</a></p>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div class="contact-info__icon-wrap" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <strong data-de="E-Mail" data-en="Email">E-Mail</strong>
+              <p><a href="mailto:hallo@physioantonia.at">hallo@physioantonia.at</a></p>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div class="contact-info__icon-wrap" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <strong data-de="Website" data-en="Website">Website</strong>
+              <p><a href="https://www.tzaphysio.at/" target="_blank" rel="noopener">tzaphysio.at</a></p>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap" id="contactForm">
+          <h3 class="contact-form-wrap__title" data-de="Oder schreiben Sie uns" data-en="Or send us a message">Oder schreiben Sie uns</h3>
+          <form class="contact-form" id="contactFormEl" novalidate>
+            <label class="form-label" for="name" data-de="Name" data-en="Name">Name</label>
+            <input class="form-input" type="text" id="name" name="name" autocomplete="name" required />
+
+            <label class="form-label" for="email" data-de="E-Mail" data-en="Email">E-Mail</label>
+            <input class="form-input" type="email" id="email" name="email" autocomplete="email" required />
+
+            <label class="form-label" for="message" data-de="Nachricht" data-en="Message">Nachricht</label>
+            <textarea class="form-input form-input--textarea" id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" class="btn btn--primary" data-de="Senden" data-en="Send">Senden</button>
+          </form>
+          <p class="contact-form-wrap__note" data-de="Bitte übermitteln Sie über dieses Formular keine sensiblen Gesundheitsdaten oder medizinischen Befunde. Für die erste Kontaktaufnahme reichen Name, E-Mail-Adresse und eine kurze Nachricht." data-en="Please do not send sensitive health data or medical reports via this form. For a first contact, your name, email address and a short message are enough.">Bitte übermitteln Sie über dieses Formular keine sensiblen Gesundheitsdaten oder medizinischen Befunde. Für die erste Kontaktaufnahme reichen Name, E-Mail-Adresse und eine kurze Nachricht.</p>
+        </div>
+
+        <div class="map-wrap">
+          <iframe
+            class="map"
+            src="https://www.google.com/maps?q=Anichstra%C3%9Fe%2034%2C%206020%20Innsbruck&output=embed"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Standort PhysioAntonia"
+          ></iframe>
+          <div class="map-placeholder" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p data-de="Karte folgt" data-en="Map coming soon">Karte folgt</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; <span id="year"></span> PhysioAntonia</p>
+      <nav class="footer__nav">
+        <a href="impressum.html" data-de="Impressum" data-en="Legal notice">Impressum</a>
+        <a href="datenschutz.html" data-de="Datenschutz" data-en="Privacy policy">Datenschutz</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Floating call button — mobile only -->
+  <a href="tel:+4912345678" class="fab" aria-label="Anrufen">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span data-de="Anrufen" data-en="Call">Anrufen</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
