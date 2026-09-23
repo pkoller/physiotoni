@@ -437,16 +437,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .contact-info__logo {
   display: inline-block;
   margin-top: 0.75rem;
-  opacity: 0.85;
   transition: opacity 200ms var(--ease-out);
 }
-.contact-info__logo:hover { opacity: 1; }
+.contact-info__logo:hover { opacity: 0.8; }
 .contact-info__logo[hidden] { display: none; }
 .contact-info__logo img {
   display: block;
-  height: 36px;
+  height: 56px;
   width: auto;
-  max-width: 160px;
   object-fit: contain;
 }
 
