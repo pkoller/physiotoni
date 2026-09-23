@@ -434,9 +434,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: color var(--transition);
 }
 .contact-info__item a:hover { color: var(--clr-primary-dark); }
+.contact-info__website {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
 .contact-info__logo {
   display: inline-block;
-  margin-top: 0.75rem;
+  flex-shrink: 0;
   transition: opacity 200ms var(--ease-out);
 }
 .contact-info__logo:hover { opacity: 0.8; }
