@@ -267,6 +267,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   width: 100%;
   height: auto;
   object-fit: cover;
+  object-position: center top;
   box-shadow: 0 8px 32px rgba(0,0,0,0.15);
 }
 .hero__title {
