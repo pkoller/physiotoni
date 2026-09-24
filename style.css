@@ -348,15 +348,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   top: 0;
   transform: translate(-50%, -50%);
 }
-.about__photo-placeholder::after {
-  content: '';
-  position: absolute;
-  bottom: -30px;
-  right: -30px;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.06);
+.about__photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .about__text .section__sub { margin-bottom: 2rem; }
 .about__credentials {
@@ -630,15 +625,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   top: 0;
   transform: translate(-50%, -50%);
 }
-.housecalls__panel::after {
-  content: '';
-  position: absolute;
-  bottom: -30px;
-  right: -30px;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.06);
+.housecalls__panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* center the divider panels on the left-aligned container */
