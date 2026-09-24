@@ -391,7 +391,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .section__sub:has(+ .section__subhead) { margin-bottom: 2rem; }
 .section__sub + .section__subhead { margin-top: 0; }
-.section__sub--after-list { margin-top: 2.25rem; }
+/* extra breathing room after a bullet list, same on every breakpoint */
+.section__sub--after-list,
+.about__credentials + .section__subhead { margin-top: 3.5rem; }
 
 /* ===== KOSTENÜBERNAHME ===== */
 #kosten .section__sub { max-width: 720px; margin-bottom: 1rem; }
