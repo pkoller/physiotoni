@@ -99,6 +99,7 @@
       '.section .section__title',
       '.section .section__sub',
       '.section .about__credentials',
+      '.section .section__subhead',
       '.about__text > p',
       '.contact-info',
       '.contact-form-wrap',

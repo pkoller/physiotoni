@@ -48,10 +48,10 @@ Responsive breakpoints: 375px / 768px / 1024px / 1440px (default).
 All backgrounds and borders are shades of the teal/cyan primary — never introduce a plain gray or a hue outside this family (a past pass briefly used blue-gray neutrals and it visibly clashed; keep new surfaces cyan-tinted).
 
 ## Layout
-- **Left sidebar nav** (`.sidebar`, fixed, `--sidebar-w` wide): logo + 4 links (Physiotherapie, Hausbesuche, Über mich, Kontakt). On mobile (≤768px) it becomes a slide-in drawer toggled by the hamburger, animated with `var(--ease-out)`.
+- **Left sidebar nav** (`.sidebar`, fixed, `--sidebar-w` wide): logo + 5 links (Physiotherapie, Hausbesuche, Über mich, Kostenübernahme, Kontakt). On mobile (≤768px) it becomes a slide-in drawer toggled by the hamburger, animated with `var(--ease-out)`.
 - **Content is left-aligned**, not centered: `.container` has `margin: 0 0 0 5rem` on desktop (≥769px) so the left gutter matches the hero image's top spacing. Don't reintroduce `margin: 0 auto` centering on desktop.
 - **Divider panels**: the Hausbesuche and Über-mich sections each have a decorative landscape image/panel (`.housecalls__panel`, `.about__photo-placeholder`) that straddles the boundary to the section above — `position: absolute`, horizontally centered on the page, `transform: translate(-50%, -50%)` vertically centers it on the divider line. They're 20:9, square corners (no `border-radius`). The neighboring sections carry extra top/bottom padding so text never collides with the panel — on mobile this padding is `calc(20.25vw + 3rem)` (scales with the panel's own height) rather than a fixed value. When editing either section, keep the panel's `.reveal` class OFF it (see Motion below) — a transform-based reveal would fight its own positioning transform.
-- **Anchor scrolling**: nav links point at inner elements (`#leistungen-eyebrow`, `#hausbesuche-eyebrow`, `#ueber-uns-title`, `#kontakt-title`), each with `scroll-margin-top: 6rem` so the sticky header doesn't cover them when jumped to.
+- **Anchor scrolling**: nav links point at inner elements (`#leistungen-eyebrow`, `#hausbesuche-eyebrow`, `#ueber-uns-title`, `#kosten-title`, `#kontakt-title`), each with `scroll-margin-top: 6rem` so the sticky header doesn't cover them when jumped to.
 
 ## Motion & interaction conventions
 Distilled from Emil Kowalski's design-engineering principles and a taste/anti-slop audit — the deeper reference lives in `.claude/skills/` (see below); this is the everyday summary.
@@ -62,7 +62,7 @@ Distilled from Emil Kowalski's design-engineering principles and a taste/anti-sl
 - **Scroll reveals**: section content fades up on first view via `.reveal`/`.is-visible` classes + an `IntersectionObserver` in `script.js`, with a short per-section stagger (`--reveal-delay`, ~70ms steps). Everything is gated behind `@media (prefers-reduced-motion: no-preference)` — reduced-motion users get the static end state, not a stripped-down animation.
 - **Nav active-state tracks the whole `<section>`**, not the small anchor element a link scrolls to. (A past bug watched the anchor itself, which lands right under the sticky header — outside the "currently in view" band — so it never lit up on click. Fixed by observing the `<section>` via a `WeakMap` from section → nav link.)
 - **Typography**: `text-wrap: balance` on headings, `text-wrap: pretty` on body paragraphs, so lines don't end on an orphaned word.
-- **Don't over-eyebrow.** A small uppercase label above a section heading (`.section__eyebrow`) is fine on sections that need one (Physiotherapie, Hausbesuche have real content in theirs), but not on every section — "Über mich" and "Kontakt" intentionally have none. Repeating the same decorative label on every section is a templated-AI-slop tell; keep it to content that earns it.
+- **Don't over-eyebrow.** A small uppercase label above a section heading (`.section__eyebrow`) is fine on sections that need one (Physiotherapie, Hausbesuche have real content in theirs), but not on every section — "Über mich", "Kostenübernahme" and "Kontakt" intentionally have none. Repeating the same decorative label on every section is a templated-AI-slop tell; keep it to content that earns it.
 - **Keyboard-triggered or very-frequent actions get no animation.** Anything a user sees dozens of times a day (not really applicable to this small site, but keep it in mind before adding motion to something like the language toggle).
 
 ## Design skills
@@ -86,15 +86,16 @@ Every visible text element on `index.html` that differs between languages carrie
 - `impressum.html` and `datenschutz.html` are **German-only by design** — legal text isn't bilingual, don't add `data-de`/`data-en` there.
 
 ## Page sections (top → bottom, index.html)
-1. **Sidebar** — fixed left nav: logo + Physiotherapie / Hausbesuche / Über mich / Kontakt (drawer on mobile)
+1. **Sidebar** — fixed left nav: logo + Physiotherapie / Hausbesuche / Über mich / Kostenübernahme / Kontakt (drawer on mobile)
 2. **Header** — sticky top bar: hamburger + mobile logo, phone, email, lang toggle
 3. **Hero** — photo left / headline + 2 CTAs right on desktop; photo shrinks and stacks on top on mobile
 4. **Physiotherapie** (`#leistungen`) — eyebrow + heading + one intro paragraph (no service cards — removed)
 5. **Hausbesuche** — intro text + bullet list + landscape divider panel straddling the section above
-6. **Über mich** (`#ueber-uns`) — heading + bio + credentials list, full width (no eyebrow, no 2-col photo — photo is now the divider panel from Hausbesuche's boundary above)
-7. **Kontakt** (`#kontakt`) — heading + contact info (address/phone/email/website) in the left column, contact form top-aligned with it in the right column, Google Maps embed full-width below
-8. **Footer** — copyright + Impressum/Datenschutz links
-9. **FAB** — floating call button, mobile only
+6. **Über mich** (`#ueber-uns`) — heading + career list + Weiterbildungen list, full width (no eyebrow, no 2-col photo — photo is now the divider panel from Hausbesuche's boundary above)
+7. **Kostenübernahme** (`#kosten`) — heading + paragraphs on prescription requirement and Wahltherapeutin cost reimbursement
+8. **Kontakt** (`#kontakt`, white background) — heading + contact info (address/phone/email/website) in the left column, contact form top-aligned with it in the right column, Google Maps embed full-width below
+9. **Footer** — copyright + Impressum/Datenschutz links
+10. **FAB** — floating call button, mobile only
 
 ## Placeholder content still to replace
 - Phone: `+49 123 45678` (placeholder — appears in header, hero, contact section, FAB; search for it)
