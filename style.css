@@ -408,7 +408,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .about__credentials + .section__subhead { margin-top: 3.5rem; }
 
 /* ===== KOSTENÜBERNAHME ===== */
-#kosten .section__sub { max-width: 720px; margin-bottom: 1rem; }
+/* these paragraphs are the section's actual content, not a subtitle: body text color */
+#kosten .section__sub { max-width: 720px; margin-bottom: 1rem; color: var(--clr-text); }
 #kosten .section__sub:last-child { margin-bottom: 0; }
 
 /* ===== CONTACT ===== */
