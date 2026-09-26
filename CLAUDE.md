@@ -28,6 +28,7 @@ Defined as CSS custom properties in `:root` in `style.css`:
 |-------|-------|-----|
 | `--clr-primary` | `#0891B2` | Teal — headings, accents, borders |
 | `--clr-primary-dark` | `#0E7490` | Hover states, logo |
+| `--clr-primary-text` | `#0B6A84` | Teal **as a text color** (eyebrows, links, contact labels, hovers) — ≥5.3:1 on every background |
 | `--clr-primary-light` | `#22D3EE` | Subtle accents |
 | `--clr-cta` | `#2563EB` | Blue — CTA buttons, FAB |
 | `--clr-cta-dark` | `#1D4ED8` | CTA hover |
@@ -35,7 +36,7 @@ Defined as CSS custom properties in `:root` in `style.css`:
 | `--clr-bg-alt` | `#E2F1F6` | Alternate section background |
 | `--clr-border` / `--clr-border-mid` | `#D2E9F0` / `#A6D3E0` | Card/input borders |
 | `--clr-text` | `#134E4A` | Body text |
-| `--clr-muted` | `#4E8B88` | Subtitles, descriptions |
+| `--clr-muted` | `#2F6763` | Subtitles, descriptions (was `#4E8B88`, failed contrast) |
 | `--clr-dark` | `#0D3330` | Headings, footer |
 | `--font-heading` | Lora, Georgia, serif | Section titles, logo |
 | `--font-body` | Raleway, system-ui, sans-serif | All body text |
@@ -44,6 +45,8 @@ Defined as CSS custom properties in `:root` in `style.css`:
 | `--sidebar-w` | `240px` | Fixed sidebar width (desktop) |
 
 Responsive breakpoints: 375px / 768px / 1024px / 1440px (default).
+
+**Contrast:** every text color must reach WCAG AA (4.5:1, or 3:1 for ≥24px / bold ≥18.7px) on its background. `--clr-primary` (#0891B2) is only 3.2–3.7:1 on the page backgrounds — use it for borders, dots and accents, never for text; use `--clr-primary-text` instead. The hero gradient's light end is `--clr-primary-dark` so the white hero text stays ≥4.5:1; don't lighten it or put `opacity` on hero text.
 
 All backgrounds and borders are shades of the teal/cyan primary — never introduce a plain gray or a hue outside this family (a past pass briefly used blue-gray neutrals and it visibly clashed; keep new surfaces cyan-tinted).
 
