@@ -28,6 +28,7 @@ Defined as CSS custom properties in `:root` in `style.css`:
 |-------|-------|-----|
 | `--clr-primary` | `#0891B2` | Teal — headings, accents, borders |
 | `--clr-primary-dark` | `#0E7490` | Hover states, logo |
+| `--clr-primary-text` | `#0B6A84` | Teal **as a text color** (eyebrows, links, contact labels, hovers) — ≥5.3:1 on every background |
 | `--clr-primary-light` | `#22D3EE` | Subtle accents |
 | `--clr-cta` | `#2563EB` | Blue — CTA buttons, FAB |
 | `--clr-cta-dark` | `#1D4ED8` | CTA hover |
@@ -35,7 +36,7 @@ Defined as CSS custom properties in `:root` in `style.css`:
 | `--clr-bg-alt` | `#E2F1F6` | Alternate section background |
 | `--clr-border` / `--clr-border-mid` | `#D2E9F0` / `#A6D3E0` | Card/input borders |
 | `--clr-text` | `#134E4A` | Body text |
-| `--clr-muted` | `#4E8B88` | Subtitles, descriptions |
+| `--clr-muted` | `#2F6763` | Subtitles, descriptions (was `#4E8B88`, failed contrast) |
 | `--clr-dark` | `#0D3330` | Headings, footer |
 | `--font-heading` | Lora, Georgia, serif | Section titles, logo |
 | `--font-body` | Raleway, system-ui, sans-serif | All body text |
@@ -45,13 +46,15 @@ Defined as CSS custom properties in `:root` in `style.css`:
 
 Responsive breakpoints: 375px / 768px / 1024px / 1440px (default).
 
+**Contrast:** every text color must reach WCAG AA (4.5:1, or 3:1 for ≥24px / bold ≥18.7px) on its background. `--clr-primary` (#0891B2) is only 3.2–3.7:1 on the page backgrounds — use it for borders, dots and accents, never for text; use `--clr-primary-text` instead. The hero gradient's light end is `--clr-primary-dark` so the white hero text stays ≥4.5:1; don't lighten it or put `opacity` on hero text.
+
 All backgrounds and borders are shades of the teal/cyan primary — never introduce a plain gray or a hue outside this family (a past pass briefly used blue-gray neutrals and it visibly clashed; keep new surfaces cyan-tinted).
 
 ## Layout
 - **Left sidebar nav** (`.sidebar`, fixed, `--sidebar-w` wide): logo + 5 links (Physiotherapie, Hausbesuche, Über mich, Kostenübernahme, Kontakt). On mobile (≤768px) it becomes a slide-in drawer toggled by the hamburger, animated with `var(--ease-out)`.
 - **Content is left-aligned**, not centered: `.container` has `margin: 0 0 0 5rem` on desktop (≥769px) so the left gutter matches the hero image's top spacing. Don't reintroduce `margin: 0 auto` centering on desktop.
 - **Divider panels**: the Hausbesuche and Über-mich sections each have a decorative landscape image/panel (`.housecalls__panel`, `.about__photo-placeholder`) that straddles the boundary to the section above — `position: absolute`, horizontally centered on the page, `transform: translate(-50%, -50%)` vertically centers it on the divider line. They're 20:9, square corners (no `border-radius`). The neighboring sections carry extra top/bottom padding so text never collides with the panel — on mobile this padding is `calc(20.25vw + 3rem)` (scales with the panel's own height) rather than a fixed value. When editing either section, keep the panel's `.reveal` class OFF it (see Motion below) — a transform-based reveal would fight its own positioning transform.
-- **Anchor scrolling**: nav links point at inner elements (`#leistungen-eyebrow`, `#hausbesuche-eyebrow`, `#ueber-uns-title`, `#kosten-title`, `#kontakt-title`), each with `scroll-margin-top: 6rem` so the sticky header doesn't cover them when jumped to.
+- **Anchor scrolling**: nav links point at inner elements (`#leistungen-eyebrow`, `#hausbesuche-eyebrow`, `#ueber-uns-photo`, `#kosten-title`, `#kontakt-title`), each with `scroll-margin-top: 6rem` so the sticky header doesn't cover them when jumped to. "Über mich" deliberately targets Antonia's divider photo, not the heading, via an invisible `.about__anchor#ueber-uns-photo` marker at the photo's top edge. Never put a nav anchor on a transformed element (like the divider panels): Safari/iOS ignores the transform when scrolling to it and overshoots, hiding the target behind the sticky header.
 
 ## Motion & interaction conventions
 Distilled from Emil Kowalski's design-engineering principles and a taste/anti-slop audit — the deeper reference lives in `.claude/skills/` (see below); this is the everyday summary.

@@ -4,13 +4,14 @@
   --clr-primary:       #0891B2;
   --clr-primary-light: #22D3EE;
   --clr-primary-dark:  #0E7490;
+  --clr-primary-text:  #0B6A84; /* teal for text: >=5.3:1 on every page background */
   --clr-cta:           #2563EB;
   --clr-cta-dark:      #1D4ED8;
   --clr-bg:            #F2FAFC;
   --clr-bg-alt:        #E2F1F6;
   --clr-white:         #FFFFFF;
   --clr-text:          #134E4A;
-  --clr-muted:         #4E8B88;
+  --clr-muted:         #2F6763;
   --clr-border:        #D2E9F0;
   --clr-border-mid:    #A6D3E0;
   --clr-dark:          #0D3330;
@@ -94,7 +95,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--clr-primary);
+  color: var(--clr-primary-text);
   margin-bottom: 0.75rem;
   scroll-margin-top: 6rem; /* clears the 68px sticky header when jumped to via nav anchor */
 }
@@ -175,7 +176,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: color var(--transition), background var(--transition);
 }
 .nav__link:hover {
-  color: var(--clr-primary);
+  color: var(--clr-primary-text);
   background: var(--clr-bg);
 }
 .nav__link.is-active {
@@ -201,7 +202,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border: 1.5px solid var(--clr-border-mid);
   transition: border-color var(--transition), color var(--transition);
 }
-.lang-toggle:hover { border-color: var(--clr-primary); color: var(--clr-primary); }
+.lang-toggle:hover { border-color: var(--clr-primary); color: var(--clr-primary-text); }
 .lang-toggle__active { color: var(--clr-primary-dark); }
 .lang-toggle__sep { color: var(--clr-border-mid); margin: 0 1px; }
 
@@ -226,7 +227,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(150deg, #0A3D3A 0%, #0E7490 55%, #0891B2 100%);
+  /* light end kept at primary-dark so white hero text stays >=4.5:1 */
+  background: linear-gradient(150deg, #0A3D3A 0%, var(--clr-primary-text) 55%, var(--clr-primary-dark) 100%);
 }
 .hero::before {
   content: '';
@@ -267,6 +269,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   width: 100%;
   height: auto;
   object-fit: cover;
+  object-position: center top;
   box-shadow: 0 8px 32px rgba(0,0,0,0.15);
 }
 .hero__title {
@@ -281,7 +284,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero__sub {
   font-size: 1.1rem;
   font-weight: 400;
-  opacity: 0.85;
   max-width: 500px;
   margin-bottom: 2.5rem;
   line-height: 1.8;
@@ -348,15 +350,21 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   top: 0;
   transform: translate(-50%, -50%);
 }
-.about__photo-placeholder::after {
-  content: '';
+/* Nav target for "Über mich": lands on Antonia's photo, not the heading below.
+   A separate, untransformed marker at the photo's visual top edge -- Safari/iOS
+   ignores the photo's translate(-50%) when scrolling to it and overshot by half
+   the photo's height. Percent margins resolve against the same containing-block
+   width as the photo's own width, so -0.225 x width = minus half its 20:9 height. */
+.about__anchor {
   position: absolute;
-  bottom: -30px;
-  right: -30px;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.06);
+  top: 0;
+  margin-top: calc(min(720px, 90%) * -0.225);
+  scroll-margin-top: 6rem;
+}
+.about__photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .about__text .section__sub { margin-bottom: 2rem; }
 .about__credentials {
@@ -395,10 +403,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .section__sub:has(+ .section__subhead) { margin-bottom: 2rem; }
 .section__sub + .section__subhead { margin-top: 0; }
-.section__sub--after-list { margin-top: 2.25rem; }
+/* extra breathing room after a bullet list, same on every breakpoint */
+.section__sub--after-list,
+.about__credentials + .section__subhead { margin-top: 3.5rem; }
 
 /* ===== KOSTENÜBERNAHME ===== */
-#kosten .section__sub { max-width: 720px; margin-bottom: 1rem; }
+/* these paragraphs are the section's actual content, not a subtitle: body text color */
+#kosten .section__sub { max-width: 720px; margin-bottom: 1rem; color: var(--clr-text); }
 #kosten .section__sub:last-child { margin-bottom: 0; }
 
 /* ===== CONTACT ===== */
@@ -438,7 +449,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--clr-primary);
+  color: var(--clr-primary-text);
   margin-bottom: 0.25rem;
 }
 .contact-info__item p {
@@ -448,11 +459,29 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   line-height: 1.5;
 }
 .contact-info__item a {
-  color: var(--clr-primary);
+  color: var(--clr-primary-text);
   font-weight: 600;
   transition: color var(--transition);
 }
-.contact-info__item a:hover { color: var(--clr-primary-dark); }
+.contact-info__item a:hover { color: var(--clr-dark); }
+.contact-info__website {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.contact-info__logo {
+  display: inline-block;
+  flex-shrink: 0;
+  transition: opacity 200ms var(--ease-out);
+}
+.contact-info__logo:hover { opacity: 0.8; }
+.contact-info__logo[hidden] { display: none; }
+.contact-info__logo img {
+  display: block;
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+}
 
 /* ===== FORM ===== */
 .contact-form-wrap {
@@ -592,7 +621,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .header__email:hover {
   border-color: var(--clr-primary);
   background: rgba(8,145,178,0.05);
-  color: var(--clr-primary);
+  color: var(--clr-primary-text);
 }
 .header__phone svg,
 .header__email svg { flex-shrink: 0; }
@@ -638,15 +667,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   top: 0;
   transform: translate(-50%, -50%);
 }
-.housecalls__panel::after {
-  content: '';
-  position: absolute;
-  bottom: -30px;
-  right: -30px;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.06);
+.housecalls__panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* center the divider panels on the left-aligned container */
@@ -842,8 +866,8 @@ body.legal-page { margin-left: 0; }
 .legal p { margin-bottom: 1rem; }
 .legal ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 1rem; }
 .legal ul li { margin-bottom: 0.35rem; }
-.legal a { color: var(--clr-primary); font-weight: 600; }
-.legal a:hover { color: var(--clr-primary-dark); }
+.legal a:not(.btn) { color: var(--clr-primary-text); font-weight: 600; }
+.legal a:not(.btn):hover { color: var(--clr-dark); }
 .legal .btn { margin-top: 2.5rem; }
 .legal-note {
   background: var(--clr-bg-alt);

@@ -20,7 +20,7 @@
     <nav class="sidebar__nav" aria-label="Hauptnavigation">
       <a href="#leistungen-eyebrow" class="nav__link" data-de="Physiotherapie" data-en="Physiotherapy">Physiotherapie</a>
       <a href="#hausbesuche-eyebrow" class="nav__link" data-de="Hausbesuche" data-en="Home visits">Hausbesuche</a>
-      <a href="#ueber-uns-title" class="nav__link" data-de="Über mich" data-en="About me">Über mich</a>
+      <a href="#ueber-uns-photo" class="nav__link" data-de="Über mich" data-en="About me">Über mich</a>
       <a href="#kosten-title" class="nav__link" data-de="Kostenübernahme" data-en="Costs">Kostenübernahme</a>
       <a href="#kontakt-title" class="nav__link" data-de="Kontakt" data-en="Contact">Kontakt</a>
     </nav>
@@ -104,8 +104,8 @@
           <p class="section__sub" data-de="Sie sind in Ihrer Mobilität eingeschränkt oder können nicht in die Praxis kommen? Dann komme ich gerne zu Ihnen – nach Hause, ins Pflegeheim oder in Ihre Einrichtung. Zurzeit beschränkt sich mein Radius auf Innsbruck Stadt." data-en="Limited mobility, or unable to come to the practice? Then I will gladly come to you – at home, in a care home or in your facility. At the moment I cover the city of Innsbruck.">Sie sind in Ihrer Mobilität eingeschränkt oder können nicht in die Praxis kommen? Dann komme ich gerne zu Ihnen – nach Hause, ins Pflegeheim oder in Ihre Einrichtung. Zurzeit beschränkt sich mein Radius auf Innsbruck Stadt.</p>
           <p class="section__sub" data-de="Wichtig ist, dass der Hausbesuch auf der ärztlichen Verordnung ausdrücklich vermerkt wird. Nur dann werden die Kosten des Hausbesuchs von der Krankenkasse übernommen." data-en="It is important that the home visit is explicitly noted on the doctor's prescription. Only then will the health insurance cover the costs of the home visit.">Wichtig ist, dass der Hausbesuch auf der ärztlichen Verordnung ausdrücklich vermerkt wird. Nur dann werden die Kosten des Hausbesuchs von der Krankenkasse übernommen.</p>
         </div>
-        <div class="housecalls__panel" aria-hidden="true">
-          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <div class="housecalls__panel">
+          <img src="img/hausbesuche.jpg" alt="Antonia begleitet eine Patientin bei einer Balance-Übung" width="1440" height="648" loading="lazy" />
         </div>
       </div>
     </div>
@@ -116,8 +116,9 @@
     <div class="container">
       <div class="about">
         <div class="about__image">
-          <div class="about__photo-placeholder" aria-label="Foto Therapeutin/Therapeut">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span class="about__anchor" id="ueber-uns-photo" aria-hidden="true"></span>
+          <div class="about__photo-placeholder">
+            <img src="img/antonia.jpg" alt="Porträt von Antonia" width="1440" height="648" loading="lazy" />
           </div>
         </div>
         <div class="about__text">
@@ -167,7 +168,7 @@
             </div>
             <div>
               <strong data-de="Adresse" data-en="Address">Adresse</strong>
-              <p>Anichstraße 34<br />6020 Innsbruck</p>
+              <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Anichstra%C3%9Fe%2034%2C%206020%20Innsbruck" target="_blank" rel="noopener">Anichstraße 34<br />6020 Innsbruck</a></p>
             </div>
           </div>
           <div class="contact-info__item">
@@ -192,9 +193,14 @@
             <div class="contact-info__icon-wrap" aria-hidden="true">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             </div>
-            <div>
-              <strong data-de="Website" data-en="Website">Website</strong>
-              <p><a href="https://www.tzaphysio.at/" target="_blank" rel="noopener">tzaphysio.at</a></p>
+            <div class="contact-info__website">
+              <div>
+                <strong data-de="Website" data-en="Website">Website</strong>
+                <p><a href="https://www.tzaphysio.at/" target="_blank" rel="noopener">tzaphysio.at</a></p>
+              </div>
+              <a class="contact-info__logo" href="https://www.tzaphysio.at/" target="_blank" rel="noopener" aria-label="TZA Physio">
+                <img src="img/tza-logo.png" alt="TZA Physio Logo" height="56" loading="lazy" onerror="this.parentNode.hidden = true" />
+              </a>
             </div>
           </div>
           </div>
