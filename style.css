@@ -584,6 +584,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .form-input--textarea { resize: vertical; min-height: 110px; }
 .contact-form .btn { align-self: flex-start; margin-top: 0.5rem; }
 .form-honeypot, .contact-form[hidden] { display: none; }
+.form-field-error {
+  margin: -0.6rem 0 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--clr-dark);
+}
+.form-field-error[hidden] { display: none; }
+.form-input[aria-invalid="true"] {
+  border-color: var(--clr-dark);
+  background: var(--clr-white);
+}
 .contact-form .btn.is-sending,
 .contact-form .btn.is-sending:hover {
   background: var(--clr-cta-dark);

@@ -101,6 +101,35 @@
     const formReset = document.getElementById('formReset');
     const submitBtn = contactForm.querySelector('[type="submit"]');
 
+    // Own validation instead of the browser's pop-ups, so the messages
+    // follow the site's DE/EN toggle rather than the browser language.
+    // Email check: local@domain.tld, no spaces, TLD at least 2 chars.
+    const EMAIL_RE = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)*\.[^\s@.]{2,}$/;
+    const fields = [
+      { input: document.getElementById('name'),    error: document.getElementById('nameError'),    isValid: v => v !== '' },
+      { input: document.getElementById('email'),   error: document.getElementById('emailError'),   isValid: v => EMAIL_RE.test(v) },
+      { input: document.getElementById('message'), error: document.getElementById('messageError'), isValid: v => v !== '' }
+    ];
+    const validateField = field => {
+      const valid = field.isValid(field.input.value.trim());
+      field.input.setAttribute('aria-invalid', String(!valid));
+      field.error.hidden = valid;
+      return valid;
+    };
+    const clearFieldErrors = () => fields.forEach(field => {
+      field.input.removeAttribute('aria-invalid');
+      field.error.hidden = true;
+    });
+    fields.forEach(field => {
+      // Check when leaving a filled field; once flagged, re-check while typing
+      field.input.addEventListener('blur', () => {
+        if (field.input.value.trim()) validateField(field);
+      });
+      field.input.addEventListener('input', () => {
+        if (field.input.getAttribute('aria-invalid') === 'true') validateField(field);
+      });
+    });
+
     const setSending = sending => {
       submitBtn.disabled = sending;
       submitBtn.classList.toggle('is-sending', sending);
@@ -115,7 +144,11 @@
 
     contactForm.addEventListener('submit', async e => {
       e.preventDefault();
-      if (!contactForm.reportValidity()) return;
+      const invalid = fields.filter(field => !validateField(field));
+      if (invalid.length) {
+        invalid[0].input.focus();
+        return;
+      }
       formError.hidden = true;
       setSending(true);
       try {
@@ -127,6 +160,7 @@
         const data = await res.json().catch(() => ({}));
         if (!res.ok || !data.success) throw new Error(data.message || res.status);
         contactForm.reset();
+        clearFieldErrors();
         showForm(false);
         formSuccess.focus();
       } catch (err) {

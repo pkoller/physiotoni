@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="PhysioAntonia – Physiotherapie, Rehabilitation und Hausbesuche in Innsbruck" />
   <title>PhysioAntonia</title>
-  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
 
@@ -216,13 +216,16 @@
             <input type="hidden" name="from_name" value="Website PhysioAntonia" />
             <input type="checkbox" name="botcheck" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <label class="form-label" for="name" data-de="Name" data-en="Name">Name</label>
-            <input class="form-input" type="text" id="name" name="name" autocomplete="name" required />
+            <input class="form-input" type="text" id="name" name="name" autocomplete="name" required aria-describedby="nameError" />
+            <p class="form-field-error" id="nameError" hidden data-de="Bitte geben Sie Ihren Namen ein." data-en="Please enter your name.">Bitte geben Sie Ihren Namen ein.</p>
 
             <label class="form-label" for="email" data-de="E-Mail" data-en="Email">E-Mail</label>
-            <input class="form-input" type="email" id="email" name="email" autocomplete="email" required />
+            <input class="form-input" type="email" id="email" name="email" autocomplete="email" required aria-describedby="emailError" />
+            <p class="form-field-error" id="emailError" hidden data-de="Bitte geben Sie eine gültige E-Mail-Adresse ein." data-en="Please enter a valid email address.">Bitte geben Sie eine gültige E-Mail-Adresse ein.</p>
 
             <label class="form-label" for="message" data-de="Nachricht" data-en="Message">Nachricht</label>
-            <textarea class="form-input form-input--textarea" id="message" name="message" rows="4" required></textarea>
+            <textarea class="form-input form-input--textarea" id="message" name="message" rows="4" required aria-describedby="messageError"></textarea>
+            <p class="form-field-error" id="messageError" hidden data-de="Bitte schreiben Sie mir eine Nachricht." data-en="Please write me a message.">Bitte schreiben Sie mir eine Nachricht.</p>
 
             <button type="submit" class="btn btn--primary" data-de="Senden" data-en="Send">Senden</button>
 
@@ -287,6 +290,6 @@
     <span data-de="Anrufen" data-en="Call">Anrufen</span>
   </a>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
